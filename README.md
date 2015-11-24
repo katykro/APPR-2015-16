@@ -4,10 +4,18 @@ Avtor: Katarina Kromar
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2015/16.
 
-## Tematika
+## Analiza umrljivosti otrok do 5. leta starosti
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal. Tukaj boste
-napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti. Najprej bom analizirala podhranjenost otrok glede na spol od leta 2010 do 2014, nato pa se nerazvitost otrok ter delež cepljenih do 5. leta starosti.
+
+Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjenih ali nerazvitih, ter ali ima cepljenje vpliv na umrljivost otrok.
+
+Podatke sem pridobila na spletu:
+
+* http://apps.who.int/gho/data/node.main.ChildMort-1?lang=en
+* http://apps.who.int/gho/data/node.main.1098?lang=en
+* http://apps.who.int/gho/data/view.main.90200
+* http://apps.who.int/gho/data/node.main.HE-1588?lang=en
 
 ## Program
 
