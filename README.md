@@ -6,7 +6,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2015/16.
 
 ## Analiza umrljivosti otrok do 5. leta starosti
 
-Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti. Najprej bom analizirala podhranjenost otrok glede na spol od leta 2010 do 2014, nato pa se nerazvitost otrok ter delež cepljenih do 5. leta starosti.
+Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti. Najprej bom analizirala podhranjenost otrok glede na spol od leta 2010 do 2014, nato pa še nerazvitost otrok ter delež cepljenih do 5. leta starosti.
 
 Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjenih ali nerazvitih, ter ali ima cepljenje vpliv na umrljivost otrok.
 
