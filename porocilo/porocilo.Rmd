@@ -3,9 +3,9 @@ title: Analiza umrljivosti otrok do 5. leta starosti
 author: "Katarina Kromar"
 output:
   pdf_document:
-    latex_engine: xelatex
     includes:
       in_header: lib/styles.sty
+    latex_engine: xelatex
 ---
 
 ```{r setup, echo=FALSE, results='hide', message=FALSE}
@@ -24,15 +24,3 @@ Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti. Najpre
 Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjenih ali nerazvitih, ter ali ima cepljenje vpliv na umrljivost otrok.
 
 ***
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
