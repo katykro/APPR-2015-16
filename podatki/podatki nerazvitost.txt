@@ -1,0 +1,1026 @@
+﻿<Data>
+  <Fact>
+    <COUNTRY>Algeria</COUNTRY>
+    <YEAR>2012-2013</YEAR>
+    <DATASOURCE>NLIS_313261</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>11.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Armenia</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313117</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>20.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Azerbaijan</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313269</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>18.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Bangladesh</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313249</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>36.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Bangladesh</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313244</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>38.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Bangladesh</COUNTRY>
+    <YEAR>2012-2013</YEAR>
+    <DATASOURCE>NLIS_313229</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>42.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Bangladesh</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313135</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>41.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Barbados</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313238</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>7.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Belize</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313154</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>19.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Benin</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313262</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>34.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Bhutan</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313077</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>33.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Bosnia and Herzegovina</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313158</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>8.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Burkina Faso</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313136</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>35.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Burundi</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313140</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>57.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Côte d'Ivoire</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313175</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>29.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Cambodia</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313252</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Cambodia</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313097</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>40.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Cameroon</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313130</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Central African Republic</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313212</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>40.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Chad</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313213</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>38.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Chile</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313247</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>1.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Chile</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313206</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>1.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>China</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313102</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>9.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Comoros</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313198</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Congo</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313189</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>25.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Democratic People's Republic of Korea</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313201</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>27.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Democratic Republic of the Congo</COUNTRY>
+    <YEAR>2013-2014</YEAR>
+    <DATASOURCE>NLIS_313236</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>42.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Democratic Republic of the Congo</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313156</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>43.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Djibouti</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313126</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>33.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Dominican Republic</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313235</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>7.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Ecuador</COUNTRY>
+    <YEAR>2012-2013</YEAR>
+    <DATASOURCE>NLIS_313242</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>25.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Egypt</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313266</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>22.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Equatorial Guinea</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313199</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>26.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Eritrea</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313226</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>50.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Ethiopia</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313225</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>40.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Ethiopia</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313116</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>44.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Gabon</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313162</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>17.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Gambia</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313214</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>23.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Ghana</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313248</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>18.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Ghana</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313215</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>22.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Guinea</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313194</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>31.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Guinea</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313160</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>35.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Guinea-Bissau</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313257</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>27.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Guinea-Bissau</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313216</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Guyana</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313258</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>12.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Haiti</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313163</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>21.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Honduras</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313165</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>22.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Indonesia</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313200</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>36.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Indonesia</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313124</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>39.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Iraq</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313217</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>22.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Jamaica</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313273</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>5.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Jamaica</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313129</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>4.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Japan</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313268</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>7.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Jordan</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313168</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>7.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kazakhstan</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313159</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>13.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kenya</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313250</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>26.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kuwait</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313254</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>5.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kuwait</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313254</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>4.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kuwait</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313144</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>4.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kuwait</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313144</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>4.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kuwait</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313144</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>4.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kyrgyzstan</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313239</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>12.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Kyrgyzstan</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_312868</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>17.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Lao People's Democratic Republic</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313176</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>43.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Lesotho</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313251</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>33.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Liberia</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313233</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Malawi</COUNTRY>
+    <YEAR>2013-2014</YEAR>
+    <DATASOURCE>NLIS_313232</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>42.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Malawi</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313100</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>47.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Mauritania</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313147</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>22.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Mauritania</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313218</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>29.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Mexico</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313139</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>13.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Mongolia</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313231</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>10.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Mongolia</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313195</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>15.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Montenegro</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313219</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>9.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Morocco</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313115</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>14.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Mozambique</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313146</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>43.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Namibia</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313243</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>23.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Nepal</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313114</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>40.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Niger</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313177</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>43.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Nigeria</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313270</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Nigeria</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313204</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>36.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Nigeria</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313157</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>36.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Pakistan</COUNTRY>
+    <YEAR>2012-2013</YEAR>
+    <DATASOURCE>NLIS_313178</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>45.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Pakistan</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313113</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>43.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Papua New Guinea</COUNTRY>
+    <YEAR>2009-2011</YEAR>
+    <DATASOURCE>NLIS_313202</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>49.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Paraguay</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313272</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>10.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Peru</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313193</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>18.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Peru</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313192</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>19.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Peru</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313191</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>23.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Philippines</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313143</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>33.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Republic of Moldova</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313241</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>6.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Rwanda</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313121</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>44.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Saint Lucia</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313209</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>2.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Senegal</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313265</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>19.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Senegal</COUNTRY>
+    <YEAR>2012-2013</YEAR>
+    <DATASOURCE>NLIS_313205</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>19.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Senegal</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313141</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>15.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Senegal</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313118</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>28.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Serbia</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313230</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>6.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Serbia</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313155</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>6.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Seychelles</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313223</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>7.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Sierra Leone</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313234</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>37.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Sierra Leone</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313134</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>44.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Sierra Leone</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313149</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>South Sudan</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313224</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>31.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Sri Lanka</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313196</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>14.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Sudan</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313259</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>38.2</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Suriname</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313152</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>8.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Swaziland</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313145</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>31.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Tajikistan</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313164</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>26.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Thailand</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313207</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>16.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>The former Yugoslav republic of Macedonia</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313210</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>4.9</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>The former Yugoslav republic of Macedonia</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313138</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>10.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Togo</COUNTRY>
+    <YEAR>2013-2014</YEAR>
+    <DATASOURCE>NLIS_313264</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>27.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Togo</COUNTRY>
+    <YEAR>2010</YEAR>
+    <DATASOURCE>NLIS_313148</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>29.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Tonga</COUNTRY>
+    <YEAR>2012</YEAR>
+    <DATASOURCE>NLIS_313255</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>8.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Tunisia</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313208</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>10.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Turkey</COUNTRY>
+    <YEAR>2013-2014</YEAR>
+    <DATASOURCE>NLIS_313227</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>9.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Uganda</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313131</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>33.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>United Republic of Tanzania</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313167</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>34.8</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>United States of America</COUNTRY>
+    <YEAR>2011-2012</YEAR>
+    <DATASOURCE>NLIS_313188</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>2.1</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Uruguay</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313127</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>11.7</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Vanuatu</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313253</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>28.5</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Viet Nam</COUNTRY>
+    <YEAR>2013</YEAR>
+    <DATASOURCE>NLIS_313256</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>19.4</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Viet Nam</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313133</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>23.3</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Yemen</COUNTRY>
+    <YEAR>2011</YEAR>
+    <DATASOURCE>NLIS_313174</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>46.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Zambia</COUNTRY>
+    <YEAR>2013-2014</YEAR>
+    <DATASOURCE>NLIS_313263</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>40.0</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Zimbabwe</COUNTRY>
+    <YEAR>2014</YEAR>
+    <DATASOURCE>NLIS_313228</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>27.6</Display>
+  </Fact>
+  <Fact>
+    <COUNTRY>Zimbabwe</COUNTRY>
+    <YEAR>2010-2011</YEAR>
+    <DATASOURCE>NLIS_313110</DATASOURCE>
+    <GHO>Children aged <5 years stunted (%)</GHO>
+    <SEX>Both sexes</SEX>
+    <Display>32.3</Display>
+  </Fact>
+</Data>
