@@ -1,11 +1,12 @@
 ---
-title: Analiza umrljivosti otrok do 5. leta starosti
+title: "Analiza umrljivosti otrok do 5. leta starosti"
 author: "Katarina Kromar"
 output:
   pdf_document:
     includes:
       in_header: lib/styles.sty
     latex_engine: xelatex
+  html_document: default
 ---
 
 ```{r setup, echo=FALSE, results='hide', message=FALSE}
@@ -22,5 +23,11 @@ source("lib/libraries.r", encoding = "UTF-8")
 Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti. Najprej bom analizirala podhranjenost otrok glede na spol od leta 2010 do 2014, nato pa še nerazvitost otrok ter delež cepljenih do 5. leta starosti.
 
 Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjenih ali nerazvitih, ter ali ima cepljenje vpliv na umrljivost otrok.
+
+Podatki:
+*http://apps.who.int/gho/data/node.main.ChildMort-1?lang=en
+*http://apps.who.int/gho/data/node.main.1098?lang=en
+*http://apps.who.int/gho/data/view.main.90200
+*http://apps.who.int/gho/data/node.main.HE-1588?lang=en
 
 ***
