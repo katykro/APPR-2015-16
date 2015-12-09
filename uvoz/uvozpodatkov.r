@@ -1,13 +1,14 @@
 # Uvoz podatkov
 
 # Funkcija, ki uvozi podatke iz datotek podatki umrljivost.csv in podatki cepljenost.csv
+require(dplyr)
 
 stolpci <- c("Drzava","Leto","Smrtnost do 5.leta starosti", "Smrtnost dojenckov")
 uvozi.umrljivost <- function(){
   return(read.table("podatki-umrljivost.csv", sep=",",
                     quote="",as.is = TRUE,
                     nrow=(195-1),header=FALSE,strip.white=TRUE, col.names=stolpci,na.strings="0 [0-0]",
-                    fileEncoding = "UTF-8",skip=2))
+                    fileEncoding = "UTF-8",skip=1))
 }
 umrljivost <- uvozi.umrljivost()
 umrljivost$Leto <- NULL
@@ -22,6 +23,13 @@ uvozi.cepljenost <- function(){
 cepljenost <- uvozi.cepljenost()
 cepljenost$k <- NULL
 cepljenost$Leto <- NULL
-cepljenost$Cepljenost.Z <- as.factor(cepljenost$Cepljenost.Z)
-cepljenost$Cepljenost.M <- as.factor(cepljenost$Cepljenost.M)
+z <-strsplit(cepljenost$Cepljenost.Z, split = " ")[[1]]
+z[1]
+m <-strsplit(cepljenost$Cepljenost.M, split = " ")[[1]]
+m[1]
+cepljenost$Cepljenost.Z <- as.numeric(cepljenost$Cepljenost.Z)
+cepljenost$Cepljenost.M <- as.numeric(cepljenost$Cepljenost.M)
 cepljenost$Cepljenost.Z[cepljenost$Cepljenost.Z == "No data"] <- NA
+
+z <-strsplit("84.7 [81.3-87.6]", split = " ")[[1]]
+z[1]
