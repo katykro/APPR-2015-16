@@ -24,12 +24,14 @@ cepljenost <- uvozi.cepljenost()
 cepljenost$k <- NULL
 cepljenost$Leto <- NULL
 z <-strsplit(cepljenost$Cepljenost.Z, split = " ")[[1]]
-z[1]
+as.numeric(z[1])
 m <-strsplit(cepljenost$Cepljenost.M, split = " ")[[1]]
-m[1]
-cepljenost$Cepljenost.Z <- as.numeric(cepljenost$Cepljenost.Z)
-cepljenost$Cepljenost.M <- as.numeric(cepljenost$Cepljenost.M)
+as.numeric(m[1])
+#cepljenost$Cepljenost.Z <- as.numeric(cepljenost$Cepljenost.Z)
+#cepljenost$Cepljenost.M <- as.numeric(cepljenost$Cepljenost.M)
 cepljenost$Cepljenost.Z[cepljenost$Cepljenost.Z == "No data"] <- NA
 
-z <-strsplit("84.7 [81.3-87.6]", split = " ")[[1]]
-z[1]
+z <-strsplit("91.7 [83.5-96.0]", split = " ")[[1]]
+as.numeric(z[1])
+
+
