@@ -32,3 +32,6 @@ cepljenost$Cepljenost.Z <- cepljenost$Cepljenost.Z %>% gsub("^([0-9. ]+).*", "\\
 cepljenost$Cepljenost.M <- cepljenost$Cepljenost.M %>% gsub("^([0-9. ]+).*", "\\1", .) %>% gsub(" ","", .) %>% as.numeric()
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.Z),]
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.M),]
+
+# združitev obeh tabel
+zdruzena <- full_join(umrljivost, cepljenost, "Drzava"="Drzava", copy=TRUE)
