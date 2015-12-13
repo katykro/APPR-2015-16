@@ -39,7 +39,7 @@ write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
 zdruzena <- full_join(umrljivost, cepljenost, "Drzava"="Drzava", copy=TRUE)
 write.csv(zdruzena, "zdruzeni.csv",row.names=FALSE)
 
-## Funkcija, ki uvozi podatke iz datotek podatki podhranjenost.txt in podatki nerazvitost.txt
+## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
 
 require(dplyr)
 require(httr)
@@ -47,10 +47,10 @@ require(jsonlite)
 library(rjson)
 library(RCurl)
 
-html <- "http://apps.who.int/gho/data/view.main.90200"
-k <- htmlTreeParse(html,encoding = "UTF-8", useInternal = TRUE)
-tab <- read_html(html)
-tabela <- html_node(tab,xpath="//table") %>% .[[1]] %>% html_table(fill = TRUE)
+html <- file("podatki/podatki-nerazvitost.html") %>% read_html()
+tabela1 <- html %>% html_nodes(xpath="//table") %>% .[[1]] %>% html_table(fill = TRUE)
+Encoding(tabela[[1]]) <- "UTF-8"
+
 
 nerazvitost <- fromJSON(file="podatki/data (12).xml", method="C")
 r <- GET("http://apps.who.int/gho/athena/data/GHO/MDG_0000000027.json?filter=COUNTRY:*;REGION:*;SEX:*")
@@ -58,6 +58,6 @@ text <- content(r, "text")
 data <- fromJSON(content(r, "text"))
 data$dataset %>% names() %>% print()
 
-tabela <- data.frame(data$dataset$data, stringsAsFactors=FALSE)
-names(tabela) <- data$dataset$column_name
-print(sapply(tabela, class))
+# tabela2 <- data.frame(data$dataset$data, stringsAsFactors=FALSE)
+# names(tabela) <- data$dataset$column_name
+# print(sapply(tabela, class))
