@@ -1,0 +1,1314 @@
+{
+  "dimension": [
+                 {
+                   "label": "GHO",
+                   "display": "Indicator"
+                 },
+                 {
+                   "label": "DATASOURCE",
+                   "display": "Data Source"
+                 },
+                 {
+                   "label": "PUBLISHSTATE",
+                   "display": "PUBLISH STATES"
+                 },
+                 {
+                   "label": "YEAR",
+                   "display": "Year"
+                 },
+                 {
+                   "label": "REGION",
+                   "display": "WHO region"
+                 },
+                 {
+                   "label": "COUNTRY",
+                   "display": "Country"
+                 },
+                 {
+                   "label": "SEX",
+                   "display": "Sex"
+                 }
+               ],
+    "fact": [
+              {
+                "dims": {
+                          "COUNTRY": "Algeria",
+                          "YEAR": "2012-2013",
+                          "DATASOURCE": "NLIS_313261",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "11.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Armenia",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313117",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "20.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Azerbaijan",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313269",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "18.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Bangladesh",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313249",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "36.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Bangladesh",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313244",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "38.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Bangladesh",
+                          "YEAR": "2012-2013",
+                          "DATASOURCE": "NLIS_313229",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "42.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Bangladesh",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313135",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "41.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Barbados",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313238",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "7.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Belize",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313154",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "19.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Benin",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313262",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "34.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Bhutan",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313077",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "33.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Bosnia and Herzegovina",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313158",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "8.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Burkina Faso",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313136",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "35.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Burundi",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313140",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "57.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Côte d'Ivoire",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313175",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "29.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Cambodia",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313252",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Cambodia",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313097",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "40.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Cameroon",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313130",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Central African Republic",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313212",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "40.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Chad",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313213",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "38.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Chile",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313247",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "1.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Chile",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313206",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "1.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "China",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313102",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "9.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Comoros",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313198",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Congo",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313189",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "25.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Democratic People's Republic of Korea",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313201",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "27.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Democratic Republic of the Congo",
+                          "YEAR": "2013-2014",
+                          "DATASOURCE": "NLIS_313236",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "42.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Democratic Republic of the Congo",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313156",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "43.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Djibouti",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313126",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "33.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Dominican Republic",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313235",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "7.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Ecuador",
+                          "YEAR": "2012-2013",
+                          "DATASOURCE": "NLIS_313242",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "25.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Egypt",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313266",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "22.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Equatorial Guinea",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313199",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "26.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Eritrea",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313226",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "50.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Ethiopia",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313225",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "40.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Ethiopia",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313116",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "44.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Gabon",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313162",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "17.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Gambia",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313214",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "23.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Ghana",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313248",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "18.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Ghana",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313215",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "22.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Guinea",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313194",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "31.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Guinea",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313160",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "35.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Guinea-Bissau",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313257",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "27.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Guinea-Bissau",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313216",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Guyana",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313258",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "12.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Haiti",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313163",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "21.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Honduras",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313165",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "22.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Indonesia",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313200",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "36.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Indonesia",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313124",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "39.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Iraq",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313217",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "22.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Jamaica",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313273",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "5.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Jamaica",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313129",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "4.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Japan",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313268",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "7.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Jordan",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313168",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "7.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kazakhstan",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313159",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "13.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kenya",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313250",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "26.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kuwait",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313254",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "5.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kuwait",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313254",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "4.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kuwait",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313144",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "4.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kuwait",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313144",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "4.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kuwait",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313144",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "4.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kyrgyzstan",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313239",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "12.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Kyrgyzstan",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_312868",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "17.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Lao People's Democratic Republic",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313176",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "43.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Lesotho",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313251",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "33.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Liberia",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313233",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Malawi",
+                          "YEAR": "2013-2014",
+                          "DATASOURCE": "NLIS_313232",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "42.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Malawi",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313100",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "47.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Mauritania",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313147",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "22.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Mauritania",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313218",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "29.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Mexico",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313139",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "13.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Mongolia",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313231",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "10.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Mongolia",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313195",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "15.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Montenegro",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313219",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "9.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Morocco",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313115",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "14.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Mozambique",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313146",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "43.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Namibia",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313243",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "23.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Nepal",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313114",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "40.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Niger",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313177",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "43.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Nigeria",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313270",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Nigeria",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313204",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "36.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Nigeria",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313157",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "36.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Pakistan",
+                          "YEAR": "2012-2013",
+                          "DATASOURCE": "NLIS_313178",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "45.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Pakistan",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313113",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "43.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Papua New Guinea",
+                          "YEAR": "2009-2011",
+                          "DATASOURCE": "NLIS_313202",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "49.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Paraguay",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313272",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "10.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Peru",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313193",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "18.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Peru",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313192",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "19.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Peru",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313191",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "23.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Philippines",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313143",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "33.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Republic of Moldova",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313241",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "6.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Rwanda",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313121",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "44.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Saint Lucia",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313209",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "2.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Senegal",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313265",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "19.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Senegal",
+                          "YEAR": "2012-2013",
+                          "DATASOURCE": "NLIS_313205",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "19.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Senegal",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313141",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "15.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Senegal",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313118",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "28.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Serbia",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313230",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "6.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Serbia",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313155",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "6.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Seychelles",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313223",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "7.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Sierra Leone",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313234",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "37.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Sierra Leone",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313134",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "44.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Sierra Leone",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313149",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "South Sudan",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313224",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "31.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Sri Lanka",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313196",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "14.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Sudan",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313259",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "38.2"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Suriname",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313152",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "8.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Swaziland",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313145",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "31.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Tajikistan",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313164",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "26.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Thailand",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313207",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "16.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "The former Yugoslav republic of Macedonia",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313210",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "4.9"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "The former Yugoslav republic of Macedonia",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313138",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "10.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Togo",
+                          "YEAR": "2013-2014",
+                          "DATASOURCE": "NLIS_313264",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "27.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Togo",
+                          "YEAR": "2010",
+                          "DATASOURCE": "NLIS_313148",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "29.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Tonga",
+                          "YEAR": "2012",
+                          "DATASOURCE": "NLIS_313255",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "8.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Tunisia",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313208",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "10.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Turkey",
+                          "YEAR": "2013-2014",
+                          "DATASOURCE": "NLIS_313227",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "9.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Uganda",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313131",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "33.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "United Republic of Tanzania",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313167",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "34.8"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "United States of America",
+                          "YEAR": "2011-2012",
+                          "DATASOURCE": "NLIS_313188",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "2.1"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Uruguay",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313127",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "11.7"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Vanuatu",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313253",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "28.5"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Viet Nam",
+                          "YEAR": "2013",
+                          "DATASOURCE": "NLIS_313256",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "19.4"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Viet Nam",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313133",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "23.3"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Yemen",
+                          "YEAR": "2011",
+                          "DATASOURCE": "NLIS_313174",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "46.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Zambia",
+                          "YEAR": "2013-2014",
+                          "DATASOURCE": "NLIS_313263",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "40.0"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Zimbabwe",
+                          "YEAR": "2014",
+                          "DATASOURCE": "NLIS_313228",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "27.6"
+              },
+              {
+                "dims": {
+                          "COUNTRY": "Zimbabwe",
+                          "YEAR": "2010-2011",
+                          "DATASOURCE": "NLIS_313110",
+                          "GHO": "Children aged <5 years stunted (%)",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "32.3"
+              }
+      ]
+}
