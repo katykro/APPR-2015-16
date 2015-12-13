@@ -1,6 +1,6 @@
 ---
-title: "Poročilo pri predmetu Analiza podatkov s programom R"
-author: "Študent FMF"
+title: "Analiza umrljivosti otrok do 5. leta starosti"
+author: "Katarina Kromar"
 output:
   html_document: default
   pdf_document:
@@ -20,29 +20,44 @@ source("lib/libraries.r", encoding = "UTF-8")
 
 # Izbira teme
 
-Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
+Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti. Najprej bom analizirala podhranjenost otrok glede na spol od leta 2010 do 2014, nato pa še nerazvitost otrok ter delež cepljenih do 5. leta starosti.
+
+Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjenih ali nerazvitih, ter ali ima cepljenje vpliv na umrljivost otrok.
+
+Podatke sem pridobila na spletu:
+
+* http://apps.who.int/gho/data/node.main.ChildMort-1?lang=en (umrljivost, podatki so v obliki csv)
+
+* http://apps.who.int/gho/data/node.main.HE-1588?lang=en (cepljenost, podatki so v obliki csv)
+
+* http://apps.who.int/gho/data/node.main.1098?lang=en (podhranjenost, podatki v obliki ???)
+
+* http://apps.who.int/gho/data/view.main.90200 (nerazvitost, podatki v obliki ???)
 
 ***
 
 # Obdelava, uvoz in čiščenje podatkov
 
-```{r uvoz, echo=FALSE}
-source("uvoz/uvoz.r", encoding = "UTF-8")
+```{r uvoz, echo=FALSE, include=FALSE}
+source("uvoz/uvozpodatkov.r", encoding = "UTF-8")
 ```
 
-Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
-z Wikipedije. Poglejmo si začetka obeh uvoženih razpredelnic.
+Uvozila sem podatke o umrljivosti in cepljenosti v obliki CSV s spletne strani World Health Organization ter podatke o podhranjenosti in nerazvitosti v obliki ???
+z iste spletne strani. Poglejmo si začetka obeh uvoženih razpredelnic v obliki CSV.
 
 ```{r razpredelnice}
-kable(head(druzine))
-head(obcine)
+kable(head(umrljivost))
+kable(head(cepljenost))
 ```
 
-Slika \ref{fig:histogram} prikazuje porazdelitev števila naselij v občinah.
 
-```{r histogram, echo=FALSE, fig.align='center', fig.cap='Histogram števila naselij v občinah'}
-hist(obcine[,4], main = "Pogostost števila naselij",
-     xlab = "Število naselij", ylab = "Število občin")
+Tabela o umrljivosti prikazuje število umrlih do 5.leta starosti in smrtnost dojenčkov po različnih državah sveta. Podatki so v tisočih, tako da je pravo število umrlih pomnoženo s tisoč, podani so številsko.
+
+Tabela \ref{fig:razpredelnice} cepljenosti otrok prikazuje odstotek cepljenih fantkov in deklic, starih eno leto, po različnih državah sveta. Cepljenost.Z prikazuje odstotek cepljenih deklic, Cepljenost.M pa odstotek fantkov.
+
+```{r histogram, echo=FALSE, fig.align='center', fig.cap='Histogram število umrlih do 5. leta starosti v državah z največjim številom umrlih'}
+#hist(zdruzena[], main = "Umrljivost do 5. leta starosti",
+#    xlab = "Število umrlih", ylab = "Število cepljenih")
 ```
 
 ***
@@ -50,16 +65,16 @@ hist(obcine[,4], main = "Pogostost števila naselij",
 # Analiza in vizualizacija podatkov
 
 ```{r vizualizacija, echo=FALSE}
-source("vizualizacija/vizualizacija.r", encoding = "UTF-8")
+#source("vizualizacija/vizualizacija.r", encoding = "UTF-8")
 ```
 
 Slika \ref{fig:zemljevid} prikazuje povprečno velikost družine za vsako občino.
 
-```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid povprečnega števila otrok v družini'}
-n <- 100
-barve <- topo.colors(n)[1+(n-1)*(druzine$povprecje-min.povprecje)/(max.povprecje-min.povprecje)]
-plot(zemljevid, col = barve)
-title("Povprečno število otrok v družini")
+```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid povprečnega števila otrok družini'}
+#n <- 100
+#barve <- topo.colors(n)[1+(n-1)*(druzine$povprecje-min.povprecje)/(max.povprecje-min.povprecje)]
+#plot(zemljevid, col = barve)
+#title("Povprečno število otrok v družini")
 ```
 
 ***
@@ -67,20 +82,20 @@ title("Povprečno število otrok v družini")
 # Napredna analiza podatkov
 
 ```{r analiza, echo=FALSE}
-source("analiza/analiza.r", encoding = "UTF-8")
+#source("analiza/analiza.r", encoding = "UTF-8")
 ```
 
 Slika \ref{fig:graf} prikazuje povezavo med številom naselij in površino občine.
 
 ```{r graf, echo=FALSE, fig.align='center', fig.cap='Povezava med številom naselij in površino občine'}
-plot(obcine[[1]], obcine[[4]],
-     main = "Število naselij glede na površino občine",
-     xlab = expression("Površina (km"^2 * ")"),
-     ylab = "Št. naselij",
-     col = barve[obcine[[7]]],
-     pch = 18)
-legend("topright", legend = names(barve), col = barve,
-       pch = 18, cex = 0.5, bg = "white")
+# plot(obcine[[1]], obcine[[4]],
+#      main = "Število naselij glede na površino občine",
+#      xlab = expression("Površina (km"^2 * ")"),
+#      ylab = "Št. naselij",
+#      col = barve[obcine[[7]]],
+#      pch = 18)
+# legend("topright", legend = names(barve), col = barve,
+#        pch = 18, cex = 0.5, bg = "white")
 ```
 
 ***
