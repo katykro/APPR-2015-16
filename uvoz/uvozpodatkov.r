@@ -35,11 +35,17 @@ cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.Z),]
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.M),]
 write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
 
+
 # združitev obeh tabel
 zdruzena1 <- full_join(umrljivost, cepljenost, "Drzava"="Drzava", copy=TRUE)
 write.csv(zdruzena1, "zdruzeni1.csv",row.names=FALSE)
-pogoste <- filter(umrljivost, Smrtnost.do.5.leta.starosti > 100)
-
+pogoste_umrljivost <- filter(umrljivost, Smrtnost.do.5.leta.starosti > 100)
+pogoste_umrljivost[4,1] <- "DRC"
+pogoste_dojencki <- filter(umrljivost, Smrtnost.dojenckov > 100)
+pogoste_dojencki[3,1] <- "DRC"
+pogoste_cepljenost <- filter(cepljenost, Cepljenost.M > 88)
+miniM <- cepljenost$Drzava[min(cepljenost$Cepljenost.M)]
+miniZ <- cepljenost$Drzava[min(cepljenost$Cepljenost.Z)]
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
  
@@ -65,6 +71,9 @@ nerazvitost$Drzava <- as.character(nerazvitost$Drzava)
 nerazvitost$`Odstotek nerazvitih otrok` <- as.numeric(levels(nerazvitost$`Odstotek nerazvitih otrok`))[nerazvitost$`Odstotek nerazvitih otrok`]
 write.csv(nerazvitost,"nerazvitost.csv",row.names=FALSE)
 
+pogoste_nerazvitost <- filter(nerazvitost,`Odstotek nerazvitih otrok` > 44)
+pogoste_nerazvitost[6,1] <- "PN Guinea"
+
 # podhranjenost
 
 podhranjeni <- fromJSON(file="podatki/podatki-podhranjenost.xml", method="C")
@@ -81,6 +90,9 @@ colnames(podhranjenost) <- stolpcipo
 podhranjenost$Drzava <- as.character(podhranjenost$Drzava)
 podhranjenost$`Odstotek podhranjenih otrok` <- as.numeric(levels(podhranjenost$`Odstotek podhranjenih otrok`))[podhranjenost$`Odstotek podhranjenih otrok`]
 write.csv(podhranjenost,"podhranjenost.csv",row.names=FALSE)
+
+pogoste_podhranjenost <- filter(podhranjenost, `Odstotek podhranjenih otrok` > 30)
+
 
 # združitev obeh  tabel iz JSON
 zdruzena2 <- full_join(nerazvitost, podhranjenost, "Drzava"="Drzava", copy=TRUE)
