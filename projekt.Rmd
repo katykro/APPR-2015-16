@@ -9,13 +9,15 @@ output:
     latex_engine: xelatex
 ---
 
-```{r setup, echo=FALSE, results='hide', message=FALSE}
+```{r setup, echo=FALSE, results='hide', message=FALSE,warning=FALSE}
 # Če želimo nastaviti pisave v PDF-ju, odkomentiramo
 # in sledimo navodilom v programu.
 #source("fontconfig.r", encoding = "UTF-8")
 
 # Uvoz vseh potrebnih knjižnic
 source("lib/libraries.r", encoding = "UTF-8")
+require(ggplot2)
+require(dplyr)
 ```
 
 # Izbira teme
@@ -26,13 +28,13 @@ Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjeni
 
 Podatke sem pridobila na spletu:
 
-* http://apps.who.int/gho/data/node.main.ChildMort-1?lang=en (umrljivost, podatki so v obliki csv)
+* http://apps.who.int/gho/data/node.main.ChildMort-1?lang=en (umrljivost, podatki so v obliki CSV)
 
-* http://apps.who.int/gho/data/node.main.HE-1588?lang=en (cepljenost, podatki so v obliki csv)
+* http://apps.who.int/gho/data/node.main.HE-1588?lang=en (cepljenost, podatki so v obliki CSV)
 
-* http://apps.who.int/gho/data/node.main.1098?lang=en (podhranjenost, podatki v obliki ???)
+* http://apps.who.int/gho/data/node.main.1098?lang=en (podhranjenost, podatki v obliki JSON)
 
-* http://apps.who.int/gho/data/view.main.90200 (nerazvitost, podatki v obliki ???)
+* http://apps.who.int/gho/data/view.main.90200 (nerazvitost, podatki v obliki JSON)
 
 ***
 
@@ -42,7 +44,7 @@ Podatke sem pridobila na spletu:
 source("uvoz/uvozpodatkov.r", encoding = "UTF-8")
 ```
 
-Uvozila sem podatke o umrljivosti in cepljenosti v obliki CSV s spletne strani World Health Organization ter podatke o podhranjenosti in nerazvitosti v obliki ???
+Uvozila sem podatke o umrljivosti in cepljenosti v obliki CSV s spletne strani World Health Organization ter podatke o podhranjenosti in nerazvitosti v obliki JSON
 z iste spletne strani. Poglejmo si začetka obeh uvoženih razpredelnic v obliki CSV.
 
 ```{r razpredelnice}
@@ -55,10 +57,62 @@ Tabela o umrljivosti prikazuje število umrlih do 5.leta starosti in smrtnost do
 
 Tabela \ref{fig:razpredelnice} cepljenosti otrok prikazuje odstotek cepljenih fantkov in deklic, starih eno leto, po različnih državah sveta. Cepljenost.Z prikazuje odstotek cepljenih deklic, Cepljenost.M pa odstotek fantkov.
 
-```{r histogram, echo=FALSE, fig.align='center', fig.cap='Histogram število umrlih do 5. leta starosti v državah z največjim številom umrlih'}
-#hist(zdruzena[], main = "Umrljivost do 5. leta starosti",
-#    xlab = "Število umrlih", ylab = "Število cepljenih")
+
+Poglejmo si še začetka obeh uvoženih razpredelnic v obliki JSON.
+
+```{r razpredelnice1}
+kable(head(podhranjenost))
+kable(head(nerazvitost))
 ```
+
+Prva tabela prikazuje odstotek podhranjenih otrok, mlajših od 5. leta. Podatki so merjeni v različnih letih ter za različne države sveta.
+
+Druga tabela prikazuje odstotek nerazvitosti otrok do 5. leta starosti, podatki pa so prav tako merjeni v različnih letih ter za različne države sveta.
+
+
+```{r histogram, echo=FALSE,fig.align='center',fig.cap='Graf število umrlih do 5. leta starosti v državah z največjim številom umrlih'}
+ggplot(data=pogoste_umrljivost,aes(x=Drzava, y=Smrtnost.do.5.leta.starosti)) + geom_point(colour='red',size=4)
+```
+
+Graf prikazuje število umrlih otrok do 5. leta starosti (prave številke so pomnožene s tisoč), v državah, kjer je umrljivost največja. Iz grafa je razvidno, da vodi Indija, za njo pa je Nigerija, Pakistan, Demokratična republika Kongo, ostale pa imajo umrljivost manjšo od 250 000 otrok v enem letu.
+
+```{r histogram1, echo=FALSE,fig.align='center',fig.cap='Graf število umrlih dojenčkov v državah z največjim številom umrlih'}
+ggplot(data=pogoste_dojencki,aes(x=Drzava, y=Smrtnost.dojenckov)) + geom_point(colour='red',size=4)
+```
+
+V tem grafu tudi opazimo, da tako kot pri prejšnem grafu v smrtnosti dojenčkov vodi Indija, sledi Nigerija, nato Pakistan, ostale države pa imajo umrljivost manjšo  od 250 000 dojenčkov na leto.
+
+```{r histogram2, echo=FALSE,fig.align='center',fig.cap='Graf kolikšen delež dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih'}
+ggplot(data=pogoste_dojencki,aes(x=Drzava, y=(pogoste_dojencki$Smrtnost.dojenckov/pogoste_dojencki$Smrtnost.do.5.leta.starosti)*100)) + geom_point(colour='red',size=4)
+```
+
+Graf prikazuje kolikšen delež umrlih dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih. Vidimo, da je največji delež na Kitajskem in Indoneziji, zanimivo pa je, da je v Nigeriji relativno majhen delež umrlih dojenčkov glede na ostale države, čeprav je iz prejšnih grafov razvidno, da je druga država z največjim številom umrlih. To si lahko interpretiramo, da v Nigeriji k smrtnosti do 5. leta dokaj velik delež prinesejo tudi otroci, stari 2-5 let, torej ne umrejo že kot dojenčki.
+
+```{r histogram4, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov) v državah z največjim odstotkom cepljenih otrok'}
+ggplot(data=pogoste_cepljenost,aes(x=Drzava, y=Cepljenost.M))+ geom_bar(fill='blue', stat= "identity")
+```
+
+
+```{r histogram5, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (deklic) v državah z največjim odstotkom cepljenih otrok'}
+ggplot(data=pogoste_cepljenost,aes(x=Drzava, y=Cepljenost.Z))+ geom_bar(fill='pink', stat= "identity")
+```
+
+
+Iz obeh grafov je razvidno, da je večina otrok, tako deklic kot fantkov v celoti cepljena pri 1. letu starosti. Največji odstotek cepljenih fantkov je v Jordanu (93.5%), prav tako deklic (92.7%). Najmanjši odstotek cepljenih fantkov je v Demokratični Republiki Kongo (17.8%), prav tako deklic (16.8%).
+
+
+```{r histogram3, echo=FALSE,fig.align='center',fig.cap='Graf odstotek nerazvitih otrok v državah z največjim odstotkom nerazvitih otrok'}
+ggplot(data=pogoste_nerazvitost,aes(x=Drzava, y=`Odstotek nerazvitih otrok`)) + geom_point(colour='red',size=4)
+```
+
+Graf prikazuje odstotek nerazvitih otrok do 5. leta starosti v državah z največjim deležem nerazvitih otrok. Razvidno je, da je največji delež - kar 57,5% nerazvitih otrok v Burundiju, mali celinski državi v Vzhodni Afriki, sledi Eriteja (severovzhodna Afrika) ter Papua Nova Gvineja (Oceanija), ostale države pa imajo delež nerazvitih otrok manjši od 50%.
+
+
+```{r histogram6, echo=FALSE,fig.align='center',fig.cap='Graf odstotek podhranjenih otrok v državah z največjim odstotkom podhranjenih'}
+ggplot(data=pogoste_podhranjenost,aes(x=Drzava, y=`Odstotek podhranjenih otrok`))+ geom_point(colour='green', size= 4)
+```
+
+
 
 ***
 
