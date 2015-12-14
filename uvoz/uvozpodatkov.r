@@ -36,28 +36,56 @@ cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.M),]
 write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
 
 # združitev obeh tabel
-zdruzena <- full_join(umrljivost, cepljenost, "Drzava"="Drzava", copy=TRUE)
-write.csv(zdruzena, "zdruzeni.csv",row.names=FALSE)
+zdruzena1 <- full_join(umrljivost, cepljenost, "Drzava"="Drzava", copy=TRUE)
+write.csv(zdruzena1, "zdruzeni1.csv",row.names=FALSE)
+pogoste <- filter(umrljivost, Smrtnost.do.5.leta.starosti > 100)
+
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
-
+ 
 require(dplyr)
 require(httr)
 require(jsonlite)
 library(rjson)
 library(RCurl)
-
-html <- file("podatki/podatki-nerazvitost.html") %>% read_html()
-tabela1 <- html %>% html_nodes(xpath="//table") %>% .[[1]] %>% html_table(fill = TRUE)
-Encoding(tabela[[1]]) <- "UTF-8"
-
-
-nerazvitost <- fromJSON(file="podatki/data (12).xml", method="C")
+ 
+nerazviti <- fromJSON(file="podatki/podatki-nerazvitost.xml", method="C")
 r <- GET("http://apps.who.int/gho/athena/data/GHO/MDG_0000000027.json?filter=COUNTRY:*;REGION:*;SEX:*")
 text <- content(r, "text")
 data <- fromJSON(content(r, "text"))
-data$dataset %>% names() %>% print()
 
-# tabela2 <- data.frame(data$dataset$data, stringsAsFactors=FALSE)
-# names(tabela) <- data$dataset$column_name
-# print(sapply(tabela, class))
+nerazvitost<- nerazviti$fact %>% sapply(unlist) %>% t() %>%
+data.frame()
+nerazvitost$dims.DATASOURCE <- NULL
+nerazvitost$dims.GHO <- NULL
+nerazvitost$dims.SEX <- NULL
+stolpci <- c("Drzava","Leto","Odstotek nerazvitih otrok")
+colnames(nerazvitost) <- stolpci
+nerazvitost$Drzava <- as.character(nerazvitost$Drzava)
+nerazvitost$`Odstotek nerazvitih otrok` <- as.numeric(levels(nerazvitost$`Odstotek nerazvitih otrok`))[nerazvitost$`Odstotek nerazvitih otrok`]
+write.csv(nerazvitost,"nerazvitost.csv",row.names=FALSE)
+
+# podhranjenost
+
+podhranjeni <- fromJSON(file="podatki/podatki-podhranjenost.xml", method="C")
+s <- GET("http://apps.who.int/gho/athena/data/GHO/WHOSIS_000008.json?profile=simple&filter=COUNTRY:*;REGION:*;SEX:*")
+text <- content(s,"text")
+podatki <- fromJSON(content(s,"text"))
+
+podhranjenost <- podhranjeni$fact %>% sapply(unlist) %>% t() %>% data.frame()
+podhranjenost$dims.DATASOURCE <- NULL
+podhranjenost$dims.GHO <- NULL
+podhranjenost$dims.SEX <- NULL
+stolpcipo <- c("Drzava","Leto","Odstotek podhranjenih otrok")
+colnames(podhranjenost) <- stolpcipo
+podhranjenost$Drzava <- as.character(podhranjenost$Drzava)
+podhranjenost$`Odstotek podhranjenih otrok` <- as.numeric(levels(podhranjenost$`Odstotek podhranjenih otrok`))[podhranjenost$`Odstotek podhranjenih otrok`]
+write.csv(podhranjenost,"podhranjenost.csv",row.names=FALSE)
+
+# združitev obeh  tabel iz JSON
+zdruzena2 <- full_join(nerazvitost, podhranjenost, "Drzava"="Drzava", copy=TRUE)
+write.csv(zdruzena2, "zdruzeni2.csv",row.names=FALSE)
+
+# celotna združitev vseh štirih tabel
+vsi_zdruzeni <- full_join(zdruzena1, zdruzena2, "Drzava"="Drzava", copy=TRUE)
+write.csv(vsi_zdruzeni, "vsi_zdruzeni.csv", row.names = FALSE)
