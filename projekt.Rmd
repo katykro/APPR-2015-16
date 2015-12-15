@@ -83,34 +83,36 @@ ggplot(data=pogoste_dojencki,aes(x=Drzava, y=Smrtnost.dojenckov)) + geom_point(c
 V tem grafu tudi opazimo, da tako kot pri prejšnem grafu v smrtnosti dojenčkov vodi Indija, sledi Nigerija, nato Pakistan, ostale države pa imajo umrljivost manjšo  od 250 000 dojenčkov na leto.
 
 ```{r histogram2, echo=FALSE,fig.align='center',fig.cap='Graf kolikšen delež dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih'}
-ggplot(data=pogoste_dojencki,aes(x=Drzava, y=(pogoste_dojencki$Smrtnost.dojenckov/pogoste_dojencki$Smrtnost.do.5.leta.starosti)*100)) + geom_point(colour='red',size=4)
+ggplot(data=pogoste_dojencki,aes(x=Drzava, y=(pogoste_dojencki$Smrtnost.dojenckov/pogoste_dojencki$Smrtnost.do.5.leta.starosti)*100)) + geom_point(colour='red',size=4) + ylab("Delež umrlih dojenčkov") 
 ```
 
 Graf prikazuje kolikšen delež umrlih dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih. Vidimo, da je največji delež na Kitajskem in Indoneziji, zanimivo pa je, da je v Nigeriji relativno majhen delež umrlih dojenčkov glede na ostale države, čeprav je iz prejšnih grafov razvidno, da je druga država z največjim številom umrlih. To si lahko interpretiramo, da v Nigeriji k smrtnosti do 5. leta dokaj velik delež prinesejo tudi otroci, stari 2-5 let, torej ne umrejo že kot dojenčki.
 
-```{r histogram4, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov) v državah z največjim odstotkom cepljenih otrok'}
+```{r histogram4, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov) v državah z najmanjšim odstotkom cepljenih otrok'}
 ggplot(data=pogoste_cepljenost,aes(x=Drzava, y=Cepljenost.M))+ geom_bar(fill='blue', stat= "identity")
 ```
 
 
-```{r histogram5, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (deklic) v državah z največjim odstotkom cepljenih otrok'}
+```{r histogram5, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (deklic) v državah z najmanjšim odstotkom cepljenih otrok'}
 ggplot(data=pogoste_cepljenost,aes(x=Drzava, y=Cepljenost.Z))+ geom_bar(fill='pink', stat= "identity")
 ```
 
 
-Iz obeh grafov je razvidno, da je večina otrok, tako deklic kot fantkov v celoti cepljena pri 1. letu starosti. Največji odstotek cepljenih fantkov je v Jordanu (93.5%), prav tako deklic (92.7%). Najmanjši odstotek cepljenih fantkov je v Demokratični Republiki Kongo (17.8%), prav tako deklic (16.8%).
+Največji odstotek cepljenih fantkov v 1. letu starosti je v Jordanu (93.5%), prav tako deklic (92.7%). Najmanjši odstotek cepljenih fantkov je v Srednjeafriški Republiki (17.8%), prav tako deklic (16.8%). Sledi Etiopija in Gabon.
 
 
 ```{r histogram3, echo=FALSE,fig.align='center',fig.cap='Graf odstotek nerazvitih otrok v državah z največjim odstotkom nerazvitih otrok'}
 ggplot(data=pogoste_nerazvitost,aes(x=Drzava, y=`Odstotek nerazvitih otrok`)) + geom_point(colour='red',size=4)
 ```
 
-Graf prikazuje odstotek nerazvitih otrok do 5. leta starosti v državah z največjim deležem nerazvitih otrok. Razvidno je, da je največji delež - kar 57,5% nerazvitih otrok v Burundiju, mali celinski državi v Vzhodni Afriki, sledi Eriteja (severovzhodna Afrika) ter Papua Nova Gvineja (Oceanija), ostale države pa imajo delež nerazvitih otrok manjši od 50%.
+Graf prikazuje odstotek nerazvitih otrok do 5. leta starosti v državah z največjim deležem nerazvitih otrok. Razvidno je, da je največji delež - kar 57.5% nerazvitih otrok v Burundiju, mali celinski državi v Vzhodni Afriki, sledi Eriteja (severovzhodna Afrika) ter Papua Nova Gvineja (Oceanija), ostale države pa imajo delež nerazvitih otrok manjši od 50%.
 
 
 ```{r histogram6, echo=FALSE,fig.align='center',fig.cap='Graf odstotek podhranjenih otrok v državah z največjim odstotkom podhranjenih'}
 ggplot(data=pogoste_podhranjenost,aes(x=Drzava, y=`Odstotek podhranjenih otrok`))+ geom_point(colour='green', size= 4)
 ```
+
+Iz grafa opazimo, da je največji odstotek podhranjenih otrok do 5. leta starosti v Eriteji, ta je namreč kar 38.8%. Za njim je še Niger, Jemen, ostale države pa imajo delež podhranjenih otrok manjši od 35%.
 
 
 
