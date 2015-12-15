@@ -39,13 +39,7 @@ write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
 # združitev obeh tabel
 zdruzena1 <- full_join(umrljivost, cepljenost, "Drzava"="Drzava", copy=TRUE)
 write.csv(zdruzena1, "zdruzeni1.csv",row.names=FALSE)
-pogoste_umrljivost <- filter(umrljivost, Smrtnost.do.5.leta.starosti > 100)
-pogoste_umrljivost[4,1] <- "DRC"
-pogoste_dojencki <- filter(umrljivost, Smrtnost.dojenckov > 100)
-pogoste_dojencki[3,1] <- "DRC"
-pogoste_cepljenost <- filter(cepljenost, Cepljenost.M > 88)
-miniM <- cepljenost$Drzava[min(cepljenost$Cepljenost.M)]
-miniZ <- cepljenost$Drzava[min(cepljenost$Cepljenost.Z)]
+
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
  
@@ -71,9 +65,6 @@ nerazvitost$Drzava <- as.character(nerazvitost$Drzava)
 nerazvitost$`Odstotek nerazvitih otrok` <- as.numeric(levels(nerazvitost$`Odstotek nerazvitih otrok`))[nerazvitost$`Odstotek nerazvitih otrok`]
 write.csv(nerazvitost,"nerazvitost.csv",row.names=FALSE)
 
-pogoste_nerazvitost <- filter(nerazvitost,`Odstotek nerazvitih otrok` > 44)
-pogoste_nerazvitost[6,1] <- "PN Guinea"
-
 # podhranjenost
 
 podhranjeni <- fromJSON(file="podatki/podatki-podhranjenost.xml", method="C")
@@ -91,9 +82,6 @@ podhranjenost$Drzava <- as.character(podhranjenost$Drzava)
 podhranjenost$`Odstotek podhranjenih otrok` <- as.numeric(levels(podhranjenost$`Odstotek podhranjenih otrok`))[podhranjenost$`Odstotek podhranjenih otrok`]
 write.csv(podhranjenost,"podhranjenost.csv",row.names=FALSE)
 
-pogoste_podhranjenost <- filter(podhranjenost, `Odstotek podhranjenih otrok` > 30)
-
-
 # združitev obeh  tabel iz JSON
 zdruzena2 <- full_join(nerazvitost, podhranjenost, "Drzava"="Drzava", copy=TRUE)
 write.csv(zdruzena2, "zdruzeni2.csv",row.names=FALSE)
@@ -101,3 +89,27 @@ write.csv(zdruzena2, "zdruzeni2.csv",row.names=FALSE)
 # celotna združitev vseh štirih tabel
 vsi_zdruzeni <- full_join(zdruzena1, zdruzena2, "Drzava"="Drzava", copy=TRUE)
 write.csv(vsi_zdruzeni, "vsi_zdruzeni.csv", row.names = FALSE)
+
+# Dodane tabele za lažjo vizualizacijo
+pogoste_umrljivost <- filter(umrljivost, Smrtnost.do.5.leta.starosti > 100)
+pogoste_umrljivost[4,1] <- "DRC"
+
+pogoste_dojencki <- filter(umrljivost, Smrtnost.dojenckov > 100)
+pogoste_dojencki[3,1] <- "DRC"
+
+pogoste_cepljenost <- filter(cepljenost, Cepljenost.M < 45)
+pogoste_cepljenost[1,1] <- "C. African R."
+pogoste_cepljenost[5,1] <- "LPDR"
+miniM <- cepljenost$Drzava[min(cepljenost$Cepljenost.M)]
+miniZ <- cepljenost$Drzava[min(cepljenost$Cepljenost.Z)]
+
+pogoste_nerazvitost <- filter(nerazvitost,`Odstotek nerazvitih otrok` > 44)
+pogoste_nerazvitost[6,1] <- "PN Guinea"
+
+pogoste_pod <- filter(podhranjenost, `Odstotek podhranjenih otrok` > 30)
+podh_b <- pogoste_pod[1,]
+podh_p <- pogoste_pod[9,]
+pogostebrez_bp <- filter(pogoste_pod, Drzava!="Bangladesh" & Drzava!= "Pakistan")
+pogoste_pod1 <- full_join(pogostebrez_bp, podh_b)
+pogoste_podhranjenost <- full_join(pogoste_pod1, podh_p)
+pogoste_podhranjenost <- arrange(pogoste_podhranjenost, Drzava)
