@@ -7,7 +7,7 @@ output:
     includes:
       in_header: lib/styles.sty
     latex_engine: xelatex
-
+---    
 
 ```{r setup, echo=FALSE, results='hide', message=FALSE,warning=FALSE}
 # Če želimo nastaviti pisave v PDF-ju, odkomentiramo
@@ -47,7 +47,7 @@ source("uvoz/uvozpodatkov.r", encoding = "UTF-8")
 Uvozila sem podatke o umrljivosti in cepljenosti v obliki CSV s spletne strani World Health Organization ter podatke o podhranjenosti in nerazvitosti v obliki JSON
 z iste spletne strani. Poglejmo si začetka obeh uvoženih razpredelnic v obliki CSV.
 
-```{r razpredelnice}
+```{r razpredelnice, echo=FALSE}
 kable(head(umrljivost))
 kable(head(cepljenost))
 ```
@@ -60,7 +60,7 @@ Tabela \ref{fig:razpredelnice} cepljenosti otrok prikazuje odstotek cepljenih fa
 
 Poglejmo si še začetka obeh uvoženih razpredelnic v obliki JSON.
 
-```{r razpredelnice1}
+```{r razpredelnice1, echo=FALSE}
 kable(head(podhranjenost))
 kable(head(nerazvitost))
 ```
@@ -130,7 +130,8 @@ Iz grafa opazimo, da je največji odstotek podhranjenih otrok do 5. leta starost
 
 Slika \ref{fig:zemljevid} prikazuje povprečno velikost družine za vsako občino.
 
-```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid povprečnega števila otrok družini'}
+```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid umrljivosti otrok do 5. leta starosti'}
+
 #n <- 100
 #barve <- topo.colors(n)[1+(n-1)*(druzine$povprecje-min.povprecje)/(max.povprecje-min.povprecje)]
 #plot(zemljevid, col = barve)
