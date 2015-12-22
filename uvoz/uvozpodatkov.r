@@ -113,3 +113,5 @@ pogostebrez_bp <- filter(pogoste_pod, Drzava!="Bangladesh" & Drzava!= "Pakistan"
 pogoste_pod1 <- full_join(pogostebrez_bp, podh_b)
 pogoste_podhranjenost <- full_join(pogoste_pod1, podh_p)
 pogoste_podhranjenost <- arrange(pogoste_podhranjenost, Drzava)
+
+pogoste_cepljenostMZ <- melt(pogoste_cepljenost,id.vars= "Drzava")
