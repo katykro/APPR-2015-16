@@ -18,6 +18,7 @@ output:
 source("lib/libraries.r", encoding = "UTF-8")
 require(ggplot2)
 require(dplyr)
+require(reshape2)
 ```
 
 # Izbira teme
@@ -35,6 +36,7 @@ Podatke sem pridobila na spletu:
 * http://apps.who.int/gho/data/node.main.1098?lang=en (podhranjenost, podatki v obliki JSON)
 
 * http://apps.who.int/gho/data/view.main.90200 (nerazvitost, podatki v obliki JSON)
+
 
 ***
 
@@ -55,8 +57,13 @@ kable(head(cepljenost))
 
 Tabela o umrljivosti prikazuje število umrlih do 5.leta starosti in smrtnost dojenčkov po različnih državah sveta. Podatki so v tisočih, tako da je pravo število umrlih pomnoženo s tisoč, podani so številsko.
 
+Podatki, ki sem jih pridobila iz spletne strani, so bili preobsežni, zato sem jih prefiltrirala po letu 2015 ter odstranila ta stolpec. Ostale stolpce sem preimenovala v slovenščino, ter jih preuredila. Pri urejanju podatkov sem imela nekaj težav, saj sem imela zraven podatkov v oklepajih še nekatere, ki jih nisem potrebovala, zato sem se morala znebiti tistih oklepajev, ter spremeniti v številske vrednosti. Izbrisala sem tudi vrstice, ki so vsebovale NA. Število držav, ki imajo podatke je 132 (torej je 132 vrstic).
+
 Tabela \ref{fig:razpredelnice} cepljenosti otrok prikazuje odstotek cepljenih fantkov in deklic, starih eno leto, po različnih državah sveta. Cepljenost.Z prikazuje odstotek cepljenih deklic, Cepljenost.M pa odstotek fantkov.
 
+Podatki, ki sem jih pridobila za cepljenost, so bili obsežni, saj so vsebovali stolpce, ki jih jaz v svojem projektu nisem potrebovala, zato sem jih odstranila. Tako so mi ostali le podatki o celotni cepljenosti fantkov in deklic. Ostale podatke sem uredila tako, kot pri prejšnji tabeli o umrljivosti. Držav, ki imajo te podatke, je 57.
+
+Tabeli o umrljivosti in cepljenosti sem združila v eno tabelo.
 
 Poglejmo si še začetka obeh uvoženih razpredelnic v obliki JSON.
 
@@ -67,8 +74,13 @@ kable(head(nerazvitost))
 
 Prva tabela prikazuje odstotek podhranjenih otrok, mlajših od 5. leta. Podatki so merjeni v različnih letih ter za različne države sveta.
 
-Druga tabela prikazuje odstotek nerazvitosti otrok do 5. leta starosti, podatki pa so prav tako merjeni v različnih letih ter za različne države sveta.
+Nekaj stolpcev sem odstranila, ter prefiltrirala tako, da so podatki najnovejši (2010-2015) ter da so za oba spola skupaj. Podatke sem uredila na podoben način, kot pri prejšnjih dveh, ki sem jih pridobila v CSV obliki. Število držav, za katere imam podatke, je 128.
 
+Druga tabela prikazuje odstotek nerazvitosti otrok do 5. leta starosti, podatki pa so prav tako merjeni v različnih letih ter za različne države sveta (128 držav).
+
+***
+
+# Analiza in vizualizacija podatkov
 
 ```{r graf1, echo=FALSE,fig.align='center',fig.cap='Graf število umrlih do 5. leta starosti v državah z največjim številom umrlih'}
 ggplot(data=pogoste_umrljivost,aes(x=Drzava, y=Smrtnost.do.5.leta.starosti)) + geom_point(colour='red',size=4)
@@ -91,14 +103,8 @@ ggplot(data=pogoste_dojencki,aes(x=Drzava, y=(pogoste_dojencki$Smrtnost.dojencko
 Graf prikazuje kolikšen delež umrlih dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih. Vidimo, da je največji delež na Kitajskem in Indoneziji, zanimivo pa je, da je v Nigeriji relativno majhen delež umrlih dojenčkov glede na ostale države, čeprav je iz prejšnih grafov razvidno, da je druga država z največjim številom umrlih. To si lahko interpretiramo, da v Nigeriji k smrtnosti do 5. leta dokaj velik delež prinesejo tudi otroci, stari 2-5 let, torej ne umrejo že kot dojenčki.
 
 
-```{r graf4, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov) v državah z največjim odstotkom cepljenih otrok'}
-ggplot(data=pogoste_cepljenost,aes(x=Drzava, y=Cepljenost.M))+ geom_bar(fill='blue', stat= "identity")
-```
-
-
-
-```{r graf5, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (deklic) v državah z največjim odstotkom cepljenih otrok'}
-ggplot(data=pogoste_cepljenost,aes(x=Drzava, y=Cepljenost.Z))+ geom_bar(fill='pink', stat= "identity")
+```{r graf4, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov in deklic) v državah z najmanjšim odstotkom cepljenih otrok'}
+ggplot(data=pogoste_cepljenostMZ,aes(x=Drzava, y=value))+ geom_bar(aes(fill=variable), stat= "identity", position="dodge") + xlab("Drzave") + ylab("Odstotek cepljenih")
 ```
 
 
@@ -119,44 +125,5 @@ ggplot(data=pogoste_podhranjenost,aes(x=Drzava, y=`Odstotek podhranjenih otrok`)
 Iz grafa opazimo, da je največji odstotek podhranjenih otrok do 5. leta starosti v Eriteji, ta je namreč kar 38.8%. Za njim je še Niger, Jemen, ostale države pa imajo delež podhranjenih otrok manjši od 35%.
 
 
-
-***
-
-# Analiza in vizualizacija podatkov
-
-```{r vizualizacija, echo=FALSE}
-#source("vizualizacija/vizualizacija.r", encoding = "UTF-8")
-```
-
-Slika \ref{fig:zemljevid} prikazuje povprečno velikost družine za vsako občino.
-
-```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid umrljivosti otrok do 5. leta starosti'}
-
-#n <- 100
-#barve <- topo.colors(n)[1+(n-1)*(druzine$povprecje-min.povprecje)/(max.povprecje-min.povprecje)]
-#plot(zemljevid, col = barve)
-#title("Povprečno število otrok v družini")
-```
-
-***
-
-# Napredna analiza podatkov
-
-```{r analiza, echo=FALSE}
-#source("analiza/analiza.r", encoding = "UTF-8")
-```
-
-Slika \ref{fig:graf} prikazuje povezavo med številom naselij in površino občine.
-
-```{r graf, echo=FALSE, fig.align='center', fig.cap='Povezava med številom naselij in površino občine'}
-# plot(obcine[[1]], obcine[[4]],
-#      main = "Število naselij glede na površino občine",
-#      xlab = expression("Površina (km"^2 * ")"),
-#      ylab = "Št. naselij",
-#      col = barve[obcine[[7]]],
-#      pch = 18)
-# legend("topright", legend = names(barve), col = barve,
-#        pch = 18, cex = 0.5, bg = "white")
-```
 
 ***
