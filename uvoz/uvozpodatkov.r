@@ -42,8 +42,6 @@ write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
 
 # združitev obeh tabel
 zdruzenaUC <- inner_join(umrljivost, cepljenost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
-write.csv(zdruzenaUC, "zdruzeniUC.csv",row.names=FALSE)
-
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
  
@@ -80,7 +78,6 @@ write.csv(nerazvitost,"nerazvitost.csv",row.names=FALSE)
 
 # združitev tabel o umrljivosti in nerazvitosti
 zdruzenaUN <- inner_join(umrljivost, nerazvitost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
-write.csv(zdruzenaUN, "zdruzeniUN.csv",row.names=FALSE)
 
 # podhranjenost
 
@@ -108,11 +105,9 @@ write.csv(podhranjenost,"podhranjenost.csv",row.names=FALSE)
 
 # združitev obeh  tabel iz JSON
 zdruzenaNP <- inner_join(nerazvitost, podhranjenost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
-write.csv(zdruzenaNP, "zdruzeniNP.csv",row.names=FALSE)
 
 #združitev umrljivosti in podhranjenosti
 zdruzenaUP <- inner_join(umrljivost, podhranjenost, "Drzava"="Drzava", "Leto"="Leto",copy=TRUE )
-write.csv(zdruzenaUP, "zdruzeniUP.csv",row.names = FALSE)
 
 # celotna združitev vseh štirih tabel
 vsi_zdruzeni <- inner_join(zdruzenaNP, zdruzenaUC, "Drzava"="Drzava", "Leto"="Leto",copy=TRUE)
@@ -151,6 +146,7 @@ analiza[2,1] <-"Burk. Faso"
 analiza[9,] <- NA
 analiza <- analiza[!is.na(analiza$Leto),]
 analiza$Delez_dojenckov <- (analiza$Smrtnost.dojenckov/analiza$Smrtnost.do.5.leta.starosti)*100
+write.csv(analiza, "analiza.csv", row.names = FALSE)
 
 require(reshape2)
 
