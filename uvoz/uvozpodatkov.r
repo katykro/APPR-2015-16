@@ -2,6 +2,7 @@
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-umrljivost.csv in podatki-cepljenost.csv
 require(dplyr)
+require(tidyr)
 
 stolpci <- c("Drzava","Leto","Smrtnost do 5.leta starosti", "Smrtnost dojenckov")
 uvozi.umrljivost <- function(){
@@ -37,6 +38,8 @@ cepljenost$Cepljenost.M <- cepljenost$Cepljenost.M %>% gsub("^([0-9. ]+).*", "\\
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.Z),]
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.M),]
 
+tidy_cepljenost <- cepljenost %>% group_by(Drzava) %>%gather(key = "Spol",value= "Cepljenost" ,-Drzava,- Leto ,na.rm=TRUE)
+tidy_cepljenost <- arrange(tidy_cepljenost,Drzava)
 write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
 
 
@@ -146,6 +149,8 @@ analiza[2,1] <-"Burk. Faso"
 analiza[9,] <- NA
 analiza <- analiza[!is.na(analiza$Leto),]
 analiza$Delez_dojenckov <- (analiza$Smrtnost.dojenckov/analiza$Smrtnost.do.5.leta.starosti)*100
+tidy_analiza <- analiza %>% group_by(Drzava) %>% gather(key = "Spol",value= "Cepljenost" ,-Drzava,- Leto, - `Odstotek nerazvitih otrok`,- `Odstotek podhranjenih otrok`,- Smrtnost.do.5.leta.starosti,- Smrtnost.dojenckov,- Delez_dojenckov,na.rm=TRUE)
+tidy_analiza <- arrange(tidy_analiza,Drzava)
 write.csv(analiza, "analiza.csv", row.names = FALSE)
 
 require(reshape2)
