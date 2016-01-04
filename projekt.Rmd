@@ -51,7 +51,7 @@ z iste spletne strani. Poglejmo si začetka obeh uvoženih razpredelnic v obliki
 
 ```{r razpredelnice, echo=FALSE}
 kable(head(analiza %>% select(Drzava, Leto, Smrtnost.do.5.leta.starosti, Smrtnost.dojenckov)))
-kable(head(analiza %>% select(Drzava, Leto, Cepljenost.Z, Cepljenost.M)))
+kable(head(tidy_analiza %>% select(Drzava, Leto, Spol, Cepljenost)))
 ```
 
 
