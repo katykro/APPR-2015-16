@@ -155,6 +155,9 @@ ggplot(data=analiza,aes(x=Drzava, y=`Odstotek podhranjenih otrok`))+ geom_point(
 
 Iz grafa opazimo, da je največji odstotek podhranjenih otrok do 5. leta starosti v Bangladešu, ta je namreč kar 36.8%. Za njim je Nigerija (31.0%), ostale države pa imajo delež podhranjenih otrok manjši od 30%.
 
+```{r zemljevid, echo=FALSE}
+source("lib/uvoz.zemljevid.r", encoding = "UTF-8")
+```
 
 
 ***
