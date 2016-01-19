@@ -153,6 +153,15 @@ tidy_analiza <- analiza %>% group_by(Drzava) %>% gather(key = "Spol",value= "Cep
 tidy_analiza <- arrange(tidy_analiza,Drzava)
 write.csv(analiza, "analiza.csv", row.names = FALSE)
 
+vsi_zdruzeni[19,] <- NA
+vsi_zdruzeni[21,] <- NA
+vsi_zdruzeni[22,] <- NA
+vsi_zdruzeni[25,] <- NA
+vsi_zdruzeni[26,] <- NA
+vsi_zdruzeni[27,] <- NA
+vsi_zdruzeni[28,] <- NA
+vsi_zdruzeni <- vsi_zdruzeni[!is.na(vsi_zdruzeni$Drzava),]
+
 require(reshape2)
 
 pogoste_cepljenostMZ <- melt(analiza %>% select(Drzava,Cepljenost.M,Cepljenost.Z),id.vars= "Drzava")
