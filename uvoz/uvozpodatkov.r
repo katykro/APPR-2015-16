@@ -1,28 +1,34 @@
 # Uvoz podatkov
 
-## Funkcija, ki uvozi podatke iz datotek podatki-umrljivost.csv in podatki-cepljenost.csv
+## Funkcija, ki uvozi podatke iz datotek podatki-umrli.csv in podatki-cepljenost.csv
 require(dplyr)
 require(tidyr)
+require(reshape2)
 
-stolpci <- c("Drzava","Leto","Smrtnost do 5.leta starosti", "Smrtnost dojenckov")
-uvozi.umrljivost <- function(){
-  return(read.table("podatki/podatki-umrljivost.csv", sep=",",
+# delež umrlih otrok do 5.leta starosti
+
+stolpciu <- c("Drzava","Leto","Smrtnost dojenckov", "Smrtnost do 5.leta starosti")
+uvozi.umrli <- function(){
+  return(read.table("podatki/podatki-umrli.csv", sep=",",
                     as.is = TRUE,
-                    nrow=(5045-1),header=FALSE,strip.white=TRUE, col.names=stolpci,na.strings="0 [0-0]",
+                    nrow=(5045-1),header=FALSE,strip.white=TRUE, col.names=stolpciu,na.strings="0 [0-0]",
                     fileEncoding = "UTF-8",skip=1))
 }
-umrljivost <- uvozi.umrljivost()
-# odstranila sem vse v oklepajih ter spremenila v numeric
-umrljivost$Smrtnost.do.5.leta.starosti <- umrljivost$Smrtnost.do.5.leta.starosti %>% gsub("^([0-9. ]+).*", "\\1", .) %>% gsub(" ","", .) %>% as.numeric()
-umrljivost$Smrtnost.dojenckov <- umrljivost$Smrtnost.dojenckov %>% gsub("^([0-9. ]+).*", "\\1", .) %>% gsub(" ","", .) %>% as.numeric()
-umrljivost$Leto <- umrljivost$Leto %>% as.numeric()
-# izbrisala sem vrstice z NA
-umrljivost <- umrljivost[!is.na(umrljivost$Smrtnost.do.5.leta.starosti),]
-umrljivost <- umrljivost[!is.na(umrljivost$Smrtnost.dojenckov),]
+umrli <- uvozi.umrli()
 
-write.csv(umrljivost,"umrljivost.csv",row.names=FALSE)
+# odstranila sem vse v oklepajih ter spremenila v numeric
+umrli$Smrtnost.do.5.leta.starosti <- umrli$Smrtnost.do.5.leta.starosti %>% gsub("^([0-9. ]+).*", "\\1", .) %>% gsub(" ","", .) %>% as.numeric()
+umrli$Smrtnost.dojenckov <- umrli$Smrtnost.dojenckov %>% gsub("^([0-9. ]+).*", "\\1", .) %>% gsub(" ","", .) %>% as.numeric()
+umrli$Leto <- umrli$Leto %>% as.numeric()
+# izbrisala sem vrstice z NA
+umrli <- umrli[!is.na(umrli$Smrtnost.do.5.leta.starosti),]
+umrli <- umrli[!is.na(umrli$Smrtnost.dojenckov),]
+
+write.csv(umrli,"umrli.csv",row.names=FALSE)
+
 
 # cepljenost
+
 stolpci <- c("Drzava","Leto","k","Cepljenost-Z","Cepljenost-M")
 uvozi.cepljenost <- function(){
   return(read.table("podatki/podatki-cepljenost.csv", sep=",",as.is = TRUE,
@@ -38,13 +44,18 @@ cepljenost$Cepljenost.M <- cepljenost$Cepljenost.M %>% gsub("^([0-9. ]+).*", "\\
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.Z),]
 cepljenost <- cepljenost[!is.na(cepljenost$Cepljenost.M),]
 
-tidy_cepljenost <- cepljenost %>% group_by(Drzava) %>%gather(key = "Spol",value= "Cepljenost" ,-Drzava,- Leto ,na.rm=TRUE)
+cepl <- cepljenost
+cepl$Z <- cepl$Cepljenost.Z
+cepl$M <- cepl$Cepljenost.M
+cepl$Cepljenost.Z <- NULL
+cepl$Cepljenost.M <- NULL
+tidy_cepljenost <- cepl %>% group_by(Drzava) %>%gather(key = "Spol",value= "Cepljenost" ,-Drzava,- Leto ,na.rm=TRUE)
 tidy_cepljenost <- arrange(tidy_cepljenost,Drzava)
-write.csv(cepljenost,"cepljenost.csv",row.names=FALSE)
+write.csv(tidy_cepljenost,"cepljenost.csv",row.names=FALSE)
 
 
 # združitev obeh tabel
-zdruzenaUC <- inner_join(umrljivost, cepljenost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
+zdruzenaUC <- inner_join(umrli, cepljenost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
  
@@ -80,7 +91,7 @@ nerazvitost <- nerazvitost[!is.na(nerazvitost$Leto),]
 write.csv(nerazvitost,"nerazvitost.csv",row.names=FALSE)
 
 # združitev tabel o umrljivosti in nerazvitosti
-zdruzenaUN <- inner_join(umrljivost, nerazvitost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
+zdruzenaUN <- inner_join(umrli, nerazvitost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
 
 # podhranjenost
 
@@ -110,19 +121,32 @@ write.csv(podhranjenost,"podhranjenost.csv",row.names=FALSE)
 zdruzenaNP <- inner_join(nerazvitost, podhranjenost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
 
 #združitev umrljivosti in podhranjenosti
-zdruzenaUP <- inner_join(umrljivost, podhranjenost, "Drzava"="Drzava", "Leto"="Leto",copy=TRUE )
+zdruzenaUP <- inner_join(umrli, podhranjenost, "Drzava"="Drzava", "Leto"="Leto",copy=TRUE )
 
 # celotna združitev vseh štirih tabel
 vsi_zdruzeni <- inner_join(zdruzenaNP, zdruzenaUC, "Drzava"="Drzava", "Leto"="Leto",copy=TRUE)
+
+vsi_zdruzeni[19,] <- NA
+vsi_zdruzeni[21,] <- NA
+vsi_zdruzeni[22,] <- NA
+vsi_zdruzeni[25,] <- NA
+vsi_zdruzeni[26,] <- NA
+vsi_zdruzeni[27,] <- NA
+vsi_zdruzeni[28,] <- NA
+vsi_zdruzeni <- vsi_zdruzeni[!is.na(vsi_zdruzeni$Drzava),]
+
 write.csv(vsi_zdruzeni, "vsi_zdruzeni.csv", row.names = FALSE)
 
-# Dodane tabele za lažjo vizualizacijo
-# največja smrtnost do 5. leta starosti (nad 95 000 na leto)
-pogoste_umrljivost <- filter(zdruzenaUC, Smrtnost.do.5.leta.starosti > 95)
-pogoste_umrljivost[3,] <- NA
-pogoste_umrljivost[7,] <- NA
-pogoste_umrljivost[2,1] <- "DR Congo"
-pogoste_umrljivost[10,1] <- "UR Tanzania"
+
+## Dodane tabele za lažjo vizualizacijo
+
+# največja smrtnost do 5. leta starosti (nad 105 otrok na 1000 rojenih)
+pogoste_umrljivost <- filter(zdruzenaUC, Smrtnost.do.5.leta.starosti > 105)
+pogoste_umrljivost[9,] <- NA
+pogoste_umrljivost[11,] <- NA
+pogoste_umrljivost[2,1] <- "Bur. Faso"
+pogoste_umrljivost[5,1] <- "DR Congo"
+pogoste_umrljivost[4,1] <- "C. African R."
 pogoste_umrljivost <- pogoste_umrljivost[!is.na(pogoste_umrljivost$Leto),]
 
 pogoste_cepljenost <- filter(cepljenost, Cepljenost.M < 45)
@@ -142,26 +166,23 @@ pogoste_pod1 <- full_join(pogostebrez_bp, podh_b)
 pogoste_podhranjenost <- full_join(pogoste_pod1, podh_p)
 pogoste_podhranjenost <- arrange(pogoste_podhranjenost, Drzava)
 
-analiza <- filter(vsi_zdruzeni, Smrtnost.do.5.leta.starosti > 50)
+
+# za analizo
+
+analiza <- filter(vsi_zdruzeni, (Smrtnost.do.5.leta.starosti > 100 | Smrtnost.do.5.leta.starosti < 30 ))
+tidy <- inner_join(analiza,tidy_cepljenost,"Drzava"="Drzava", "Leto"="Leto",copy=TRUE)
+
 analiza[4,1] <- "DR Congo"
-analiza[1,1] <- "Banglad."
-analiza[2,1] <-"Burk. Faso"
-analiza[9,] <- NA
+analiza[2,1] <- "Bur. Faso"
+analiza[10,1] <-"S. Leone"
+analiza[7,1] <-"Kyrgyz."
+analiza[11,1] <-"Maced."
 analiza <- analiza[!is.na(analiza$Leto),]
-analiza$Delez_dojenckov <- (analiza$Smrtnost.dojenckov/analiza$Smrtnost.do.5.leta.starosti)*100
-tidy_analiza <- analiza %>% group_by(Drzava) %>% gather(key = "Spol",value= "Cepljenost" ,-Drzava,- Leto, - `Odstotek nerazvitih otrok`,- `Odstotek podhranjenih otrok`,- Smrtnost.do.5.leta.starosti,- Smrtnost.dojenckov,- Delez_dojenckov,na.rm=TRUE)
+
+tidy$Cepljenost.M <- NULL
+tidy$Cepljenost.Z <- NULL
+tidy_analiza <- tidy %>% group_by(Drzava)
 tidy_analiza <- arrange(tidy_analiza,Drzava)
-write.csv(analiza, "analiza.csv", row.names = FALSE)
-
-vsi_zdruzeni[19,] <- NA
-vsi_zdruzeni[21,] <- NA
-vsi_zdruzeni[22,] <- NA
-vsi_zdruzeni[25,] <- NA
-vsi_zdruzeni[26,] <- NA
-vsi_zdruzeni[27,] <- NA
-vsi_zdruzeni[28,] <- NA
-vsi_zdruzeni <- vsi_zdruzeni[!is.na(vsi_zdruzeni$Drzava),]
-
-require(reshape2)
+write.csv(tidy_analiza, "analiza.csv", row.names = FALSE)
 
 pogoste_cepljenostMZ <- melt(analiza %>% select(Drzava,Cepljenost.M,Cepljenost.Z),id.vars= "Drzava")

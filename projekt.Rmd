@@ -2,11 +2,11 @@
 title: "Analiza umrljivosti otrok do 5. leta starosti"
 author: "Katarina Kromar"
 output:
+  html_document: default
   pdf_document:
     includes:
       in_header: lib/styles.sty
     latex_engine: xelatex
-  html_document: default
 ---    
 
 ```{r setup, echo=FALSE, results='hide', message=FALSE,warning=FALSE}
@@ -16,20 +16,17 @@ output:
 
 # Uvoz vseh potrebnih knjižnic
 source("lib/libraries.r", encoding = "UTF-8")
-require(ggplot2)
-require(dplyr)
-require(reshape2)
 ```
 
 # Izbira teme
 
 Analizirala bom podatke o umrljivosti otrok po svetu do 5. leta starosti ter umrljivost dojenčkov. Najprej bom analizirala delež cepljenih v 1. letu starosti glede na spol, nato pa še delež nerazvitih ter podhranjenih otrok do 5. leta starosti (podatki od leta 2010 do 2014).
 
-Skozi analizo želim izvedeti kolikšen delež tistih, ki umrejo, je podhranjenih ali nerazvitih, ter ali ima cepljenje vpliv na umrljivost otrok.
+Skozi analizo želim izvedeti kolikšen delež je podhranjenih ali nerazvitih v državah z največjo umrljivostjo, ter ali ima cepljenje vpliv na umrljivost otrok.
 
 Podatke sem pridobila na spletu:
 
-* http://apps.who.int/gho/data/node.main.ChildMort-1?lang=en (umrljivost, podatki so v obliki CSV)
+* http://apps.who.int/gho/data/node.main.ChildMort-2?lang=en (umrljivost, podatki so v obliki CSV)
 
 * http://apps.who.int/gho/data/node.main.HE-1588?lang=en (cepljenost, podatki so v obliki CSV)
 
@@ -56,30 +53,30 @@ kable(head(tidy_analiza %>% select(Drzava, Leto, Spol, Cepljenost)))
 
 \pagebreak
 
-Umrljivost:
+**Umrljivost:**
 
 * Drzava - podatki za različne države sveta, tip: character
 
 * Leto - podatki so do leta 2015, podani so številsko
 
-* Smrtnost.do.5.leta.starosti - prikazuje število umrlih do 5.leta starosti, podatki so v tisočih, tako da je pravo število umrlih pomnoženo s tisoč, podani so številsko
+* Smrtnost.do.5.leta.starosti - prikazuje število umrlih do 5.leta starosti na 1000 živorojenih dojenčkov, podani so številsko
 
-* Smrtnost.dojenckov - smrtnost dojenčkov, podatki so v tisočih, tako da je pravo število umrlih pomnoženo s tisoč, podani so številsko
+* Smrtnost.dojenckov - smrtnost dojenčkov na 1000 rojstev, podani so številsko
 
 
-Stolpce sem preimenovala v slovenščino, ter jih preuredila. Pri urejanju podatkov sem imela nekaj težav, saj sem imela zraven podatkov v oklepajih še nekatere, ki jih nisem potrebovala, zato sem se morala znebiti tistih oklepajev, ter spremeniti v številske vrednosti. Izbrisala sem tudi vrstice, ki so vsebovale NA. Število vrstic je 3608.
+Stolpce sem preimenovala v slovenščino, ter jih preuredila. Pri urejanju podatkov sem imela nekaj težav, saj sem imela zraven podatkov v oklepajih še razpon podatkov, ki jih nisem potrebovala, zato sem se jih morala znebiti, ter spremeniti v številske vrednosti. Izbrisala sem tudi vrstice, ki so vsebovale NA. Število vrstic je 5044.
 
-Cepljenost:
+**Cepljenost:**
 
 * Drzava - podatki za različne države sveta, tip: character
 
 * Leto - podatki so od leta 2010 do 2014, podani so številsko
 
-* Cepljenost.Z - prikazuje odstotek cepljenih deklic, starih eno leto, podani številsko
+* Spol - podatki za ženske (Z) ter za moške (M), tip: factor
 
-* Cepljenost.M - prikazuje odstotek cepljenih fantkov, starih eno leto, podani številsko
+* Cepljenost - odstotek cepljenih otrok do 1. leta starosti, podani so številsko
 
-Podatki, ki sem jih pridobila za cepljenost, so bili obsežni, saj so vsebovali stolpce, ki jih jaz v svojem projektu nisem potrebovala, zato sem jih odstranila. Tako so mi ostali le podatki o celotni cepljenosti fantkov in deklic. Ostale podatke sem uredila tako, kot pri prejšnji tabeli o umrljivosti. Število vrstic je 57.
+Podatki, ki sem jih pridobila za cepljenost, so bili obsežni, saj so vsebovali stolpce, ki jih jaz v svojem projektu nisem potrebovala, zato sem jih odstranila. Tako so mi ostali le podatki o celotni cepljenosti fantkov in deklic. Ostale podatke sem uredila tako, kot pri prejšnji tabeli o umrljivosti. Število vrstic je 114.
 
 
 Poglejmo si še začetka obeh uvoženih razpredelnic v obliki JSON.
@@ -91,7 +88,7 @@ kable(head(analiza %>% select(Drzava, Leto, `Odstotek nerazvitih otrok`)))
 
 \pagebreak
 
-Podhranjenost:
+**Podhranjenost:**
 
 * Drzava - podatki za različne države sveta, tip: character
 
@@ -101,7 +98,7 @@ Podhranjenost:
 
 Nekaj stolpcev sem odstranila, ter prefiltrirala tako, da so podatki najnovejši (2010-2014) ter da so za oba spola skupaj. Podatke sem uredila na podoben način, kot pri prejšnjih dveh, ki sem jih pridobila v CSV obliki. Število vrstic je 93.
 
-Nerazvitost:
+**Nerazvitost:**
 
 * Drzava - podatki za različne države sveta, tip: character
 
@@ -109,9 +106,9 @@ Nerazvitost:
 
 * Odstotek nerazvitih otrok - prikazuje odstotek nerazvitosti otrok do 5. leta starosti, podani številsko
 
-Podatke sem uredila podobno kot pri prejšnih tabelah. Število vrstic je 93.
+Podatke sem uredila podobno kot pri prejšnjih tabelah. Število vrstic je 93.
 
-Združila sem tabele o umrljivosti, podhranjenosti, nerazvitosti in cepljenosti in sicer po državah in letih ter jih prefiltrirala, da je smrtnost do 5. leta starosti večja od 50 000 v enem letu. S temi podatki bom sedaj lahko delala v nadaljevanju.
+Združila sem tabele o umrljivosti, podhranjenosti, nerazvitosti in cepljenosti in sicer po državah in letih ter jih prefiltrirala, da je smrtnost do 5. leta starosti večja od 100 otrok na 1000 rojenih ali manjša od 20 na 1000 rojenih. S temi podatki bom sedaj lahko delala v nadaljevanju.
 
 ***
 
@@ -120,38 +117,30 @@ Združila sem tabele o umrljivosti, podhranjenosti, nerazvitosti in cepljenosti 
 \pagebreak
 
 ```{r graf1, echo=FALSE,fig.align='center',fig.cap='Graf število umrlih do 5. leta starosti v državah z največjim številom umrlih'}
-ggplot(data=analiza,aes(x=Drzava, y=Smrtnost.do.5.leta.starosti)) + geom_point(colour='red',size=4)
+ggplot(data=analiza,aes(x=Drzava, y=Smrtnost.do.5.leta.starosti)) + geom_point(colour='red',size=4) + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
-Graf prikazuje število umrlih otrok do 5. leta starosti (prave številke so pomnožene s tisoč), v državah, kjer je umrljivost največja. Iz grafa je razvidno, da vodi Nigerija, za njo pa je Demokratična republika Kongo, ostale pa imajo umrljivost manjšo od 200 000 otrok v enem letu.
+Graf prikazuje število umrlih otrok do 5. leta starosti na 1000 živorojenih, v državah, kjer je umrljivost največja ter v državah, kjer je umrljivost najmanjša. Iz grafa je razvidno, da v umrljivosti vodi Sierra Leone, za njo pa je Demokratična republika Kongo, Nigerija in Burkina Faso, ostale pa imajo umrljivost manjšo od 110 otrok na 1000 rojenih. Opazimo, da so države, ki imajo najnižjo umrljivost Makedonija, dokaj blizu so tudi Armenija, Jordanija ter Peru.
 
 \pagebreak
 
 ```{r graf2, echo=FALSE,fig.align='center',fig.cap='Graf število umrlih dojenčkov v državah z največjim številom umrlih'}
-ggplot(data=analiza,aes(x=Drzava, y=Smrtnost.dojenckov)) + geom_point(colour='red',size=4)
+ggplot(data=analiza,aes(x=Drzava, y=Smrtnost.dojenckov)) + geom_point(colour='red',size=4)+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
-V tem grafu tudi opazimo, da v smrtnosti dojenčkov vodi Nigerija, nato Demokratična republika Kongo, ostale države pa imajo umrljivost manjšo  od 150 000 dojenčkov v enem letu.
+V tem grafu tudi opazimo, da v smrtnosti dojenčkov vodi Sierra Leone, nato Nigerija, ostale države pa imajo umrljivost manjšo  od 35 dojenčkov na 1000 rojenih. Zopet ima najnižjo umrljivost Makedonija.
+
 
 \pagebreak
 
-```{r graf3, echo=FALSE,fig.align='center',fig.cap='Graf kolikšen delež dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih'}
-ggplot(data=analiza,aes(x=Drzava, y=Delez_dojenckov)) + geom_point(colour='red',size=4)+ ylab("Delež umrlih dojenčkov")
-```
-
-
-Graf prikazuje kolikšen delež umrlih dojenčkov prispeva k smrtnosti do 5. leta starosti v državah z največjim številom umrlih. Vidimo, da je največji delež v Bangladešu in sicer 79%, zanimivo pa je, da je v Nigeriji relativno majhen delež umrlih dojenčkov glede na ostale države, čeprav je iz prejšnjih grafov razvidno, da vodi po številu umrlih otrok do 5. leta starosti ter umrlih dojenčkov. To si lahko interpretiramo, da v Nigeriji k smrtnosti do 5. leta dokaj velik delež prinesejo tudi otroci, stari 2-5 let, torej ne umrejo že kot dojenčki.
-
-\pagebreak
-
-```{r graf4, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov in deklic) v državah z največjim številom umrlih'}
+```{r graf3, echo=FALSE,fig.align='center',fig.cap='Graf odstotek cepljenih otrok (fantkov in deklic) v državah z največjim številom umrlih'}
 ggplot(data=pogoste_cepljenostMZ,aes(x=Drzava, y=value))+ geom_bar(aes(fill=variable), stat= "identity", position="dodge") + xlab("Drzave") + ylab("Odstotek cepljenih") + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
 
 
-Največji odstotek cepljenih fantkov v 1. letu starosti je v Jordaniji (93.5%), prav tako deklic (92.7%). Najmanjši odstotek cepljenih fantkov (izmed držav, ki jih analiziram), je v Nigeriji (26.0%), prav tako deklic (25.2%). Sledi Demokratična republika Kongo.
+Največji odstotek cepljenih deklic v 1. letu starosti je v Jordaniji (93.5%), prav tako fantkov (92.7%). Najmanjši odstotek cepljenih deklic (izmed držav, ki jih analiziram), je v Nigeriji (25.2%), prav tako fantkov (26.0%). Sledi Gvineja.
 
-Iz tukaj bi lahko veljalo, da cepljenost res vpliva na umrljivost dojenčkov in otrok do 5. leta starosti, saj je v Nigeriji največja umrljivost in najmanjša cepljenost. Države bom poskusila razdeliti v skupine glede na cepljenost (tiste, ki so si najbolj podobne v odstotku cepljenih) ter nato primerjala z umrljivostjo v teh državah. Predvidevam, da če je večji odstotek cepljenih otrok, da je manjša umrljivost in tako bi lahko modelirala predikcijo s prileganjem (v zadnji fazi).
+Iz tukaj bi lahko veljalo, da cepljenost res vpliva na umrljivost dojenčkov in otrok do 5. leta starosti, saj sta Nigerija in Gvineja eni izmed držav z največjo umrljivostjo in najmanjšo cepljenostjo. Po drugi strani imajo Jordanija, Makedonija in Armenija največji delež cepljenih in najmanjši delež umrlih otrok do 5. leta starosti na 1000 rojenih. Države bom poskusila razdeliti v skupine glede na cepljenost (tiste, ki so si najbolj podobne v odstotku cepljenih) ter nato primerjala z umrljivostjo v teh državah. Predvidevam, da če je večji odstotek cepljenih otrok, da je manjša umrljivost (v zadnji fazi).
 
 \pagebreak
 
@@ -166,7 +155,7 @@ source("lib/uvoz.zemljevid.r", encoding = "UTF-8")
 print(map1)
 ```
 
-Največji odstotek podhranjenih otrok do 5. leta starosti je v Bangladešu, ta je namreč kar 36.8%. Za njim je Nigerija (31.0%), ostale države pa imajo delež podhranjenih otrok manjši od 30%.
+Največji odstotek podhranjenih otrok do 5. leta starosti je v Bangladešu, ta je namreč kar 36.8%. Za njim je Nigerija (31.0%), ostale države pa imajo delež podhranjenih otrok manjši od 30%. Najmanjši delež podhranjenih ima Makedonija, in sicer 1.3%.
 
 \pagebreak
 
@@ -174,6 +163,84 @@ Največji odstotek podhranjenih otrok do 5. leta starosti je v Bangladešu, ta j
 print(map2)
 ```
 
-Največji delež (47.8%) nerazvitih otrok je v Malaviju (južna Afrika), sledi Demokratična republika Kongo, zelo blizu pa je tudi Mozambik (prav tako južna Afrika), ostale države pa imajo delež nerazvitih otrok manjši od 40%.
+Največji delež (47.8%) nerazvitih otrok je v Malaviju (južna Afrika), sledi Demokratična republika Kongo, zelo blizu pa je tudi Mozambik (prav tako južna Afrika), ostale države pa imajo delež nerazvitih otrok manjši od 40%. Najmanjši delež nerazvitih je v Makedoniji (4.9%).
 
 ***
+
+\pagebreak
+
+```{r analiza, echo=FALSE,include=FALSE}
+source("analiza/analiza.r", encoding = "UTF-8")
+```
+
+```{r analiza1, echo=FALSE,fig.align='center',fig.cap='Dendrogram'}
+plot(dend2)
+```
+
+Prikazan je dendrogram z metodo "ward.D". Države, ki so si podobne med seboj v odstotku cepljenih ter v smrtnosti otrok do 5.leta starosti, sem združila v skupino. Nastalo je tako 5 skupin za 26 držav.
+
+* **1.skupina:**
+    +  Macedonia: 8  93%
+    +  Armenia:  18  92%
+    +  Jordan:   20  93%
+  
+Prva številka predstavlja število umrlih otrok do 5. leta starosti na 1000 živorojenih dojenčkov, druga pa odstotek cepljenih do 1. leta starosti.
+
+Opazimo, da so v tej skupini države, ki imajo zelo nizko stopnjo umrljivosti (15 otrok do 5. leta na 1000 rojenih) ter zelo visoko stopnjo cepljenosti (93%).
+
+* **2.skupina:**
+    +  Bangladesh: 47  85%
+    +  Tajikistan: 50  88%
+    +  Peru:       20  73%
+    +  Kyrgyzstan: 26  78%
+    +  Mongolia:   30  80%
+    +  Iraq:       36  62%
+    +  Senegal:    56  71%
+            
+V tej skupini so države, ki imajo kar veliko stopnjo cepljenosti (okoli 77%) ter dokaj majhno stopnjo umrljivosti (približno 38 otrok na 1000 rojenih).
+
+* **3.skupina:**
+    +  Ghana:       72  86%
+    +  Malawi:      91  81%
+    +  Swaziland:   88  86%
+    +  Burkina Faso:113 80%
+    +  Sierra Leone:133 68%
+    
+3.skupina predstavlja države s kar veliko stopnjo cepljenosti (80%), vendar imajo vseeno zelo velik delež umrlih na 1000 rojenih (približno 97 umrlih otrok do 5. leta starosti). Torej ta skupina predstavlja protiprimer za moja ugibanja o tem, da če je majhna cepljenost, da je tako večja umrljivost. Na umrljivost seveda vplivajo tudi drugi dejavniki, ki jih tukaj nisem obravnavala, saj jih je zelo veliko. Vse pa nekako izvira iz življenjskega standarda, zdravstvene oskrbe, oskrbe s pitno vodo, možnosti za cepljenje, ozaveščenost, vojne, higiena ... - vse je nekako povezano med seboj.
+
+* **4.skupina:** 
+    +  Guinea:  104 34%
+    +  Nigeria: 117 25%
+
+Nigerija in Gvineja sta državi z najmanjšim deležem cepljenih (okoli 30%), ter največjim deležem umrlih (110 otrok na 1000 živorojenih). Sta lepa primera, na katerih lahko opazimo, da sta cepljenost in umrljivost res negativno povezani.
+
+* **5.skupina:**
+    +  Gabon:     58  32%
+    +  Haiti:     75  44%
+    +  Liberia:   76  57%
+    +  Uganda:    70  53%
+    +  Comoros:   81  68%
+    +  Mozambique:98  66%
+    +  DR Congo:  116 48%
+    +  Cameroon:  101 55%
+    +  Togo:      91  53%
+    
+V zadnji skupini so države s srednje velikim deležem cepljenih (povprečno 53%), ter še kar velikim deležem umrlih (povprečno 85 na 1000 živorojenih otrok). Tukaj bi mogoče dala DR Congo rajši pod 4. skupino, saj lepo prikazuje, da je delež cepljenih pod 50% (še vedno zelo malo) ter število umrlih na 1000 živorojenih otrok nad 110.
+
+Pa si oglejmo še zemljevid, ki prikazuje vse te države ter razdelitve v skupine.
+
+```{r analiza2, echo=FALSE,fig.align='center',fig.cap='Zemljevid s skupinami'}
+plot(zem3)
+```
+
+Skupine so iste kot pri dendrogramu, razlika je le v tem, da sta tukaj Comoros in Mozambique v 3. skupini, namesto v 5., ter Congo v 4. skupini, namesto v 5.
+
+* Skupina z oranžno barvo predstavlja države s srednje velikim deležem cepljenih (C ~), ter še kar velikim deležem umrlih (U ~) - 5. skupina, če gledamo dendrogram.
+
+* Skupina v zeleni barvi predstavlja države, ki imajo zelo velik delež cepljenih ter zelo majhen delež umrlih (C >>, U <<) - 1. skupina, če gledamo dendrogram.
+
+* Skupina v rumeni barvi predstavlja države, ki imajo dokaj velik delež cepljenih ter dokaj majhen delež umrlih (C >, U <) - 2. skupina, če gledamo dendrogram.
+
+* Skupina v modri barvi predstavlja države, ki imajo dokaj velik delež cepljenih, vendar zelo velik delež umrlih (C >, U >) - 3. skupina, če gledamo dendrogram.
+
+* Skupina v rdeči barvi predstavlja države, ki imajo zelo majhen delež cepljenih ter zelo velik delež umrlih (C <<, U >>) - 4. skupina, če gledamo dendrogram.
