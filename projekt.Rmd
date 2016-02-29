@@ -169,6 +169,8 @@ Največji delež (47.8%) nerazvitih otrok je v Malaviju (južna Afrika), sledi D
 
 \pagebreak
 
+# Napredna analiza
+
 ```{r analiza, echo=FALSE,include=FALSE}
 source("analiza/analiza.r", encoding = "UTF-8")
 ```

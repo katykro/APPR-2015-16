@@ -51,58 +51,8 @@ sk2 <- cutree(hc2, k = n)
 labels_colors(dend2) <- rainbow(n)[sk2][order.dendrogram(dend2)]
 plot(dend2)
 
-# predikcija
-require(mgcv)
-options(scipen=999)
-faktor1=0
-faktor2=0
-faktor3=0
 
-napoved_graf <- ggplot(vsi_zdruzeni %>% mutate(applicants=Smrtnost.do.5.leta.starosti+faktor1*Smrtnost.do.5.leta.starosti+faktor2*Smrtnost.do.5.leta.starosti+faktor3*Smrtnost.do.5.leta.starosti),
-                       aes(x=Cepljenost.Z,y=applicants,group=Drzava,color=Drzava))+xlab("")+ylab("")+geom_smooth(method = "loess")
-
-
-lin <- lm(data=vsi_zdruzeni,Cepljenost.Z ~ Smrtnost.do.5.leta.starosti)
-kv <- lm(data=vsi_zdruzeni,Cepljenost.Z ~ Smrtnost.do.5.leta.starosti+I(Smrtnost.do.5.leta.starosti^2))
-mls <- loess(data=vsi_zdruzeni,Cepljenost.Z ~ Smrtnost.do.5.leta.starosti)
-mgam <- gam(data=vsi_zdruzeni,Cepljenost.Z ~ s(Smrtnost.do.5.leta.starosti))
-sapply(list(lin, kv, mls, mgam), function(x) sum(x$residuals^2))
-# 7185.077 6926.430 6538.605 7185.077 <- iz tega opazimo, da je najboljša metoda ???
-
-
-
-#prvi zemljevid prikazuje razdelitev afriških držav na 3 skupine
-
-# pod_analiza1 <- analiza
-# pod_analiza1[1,1] <- "Burkina Faso"
-# pod_analiza1[4,1] <- "Democratic Republic of the Congo"
-# pod_analiza1[9,1] <- "Sierra Leone"
-# rownames(pod_analiza1) <- pod_analiza1$Drzava
-# pod_analiza1 <- pod_analiza1[c("Cepljenost.Z","Smrtnost.do.5.leta.starosti")]
-# analiza.norm1 <- scale(pod_analiza1)
-# 
-# k <- kmeans(analiza.norm1,3)
-# table(k$cluster)
-# k <- kmeans(analiza.norm1,3,nstart = 10000)
-# analiza.skupine1 <- data.frame(Drzava = names(k$cluster), skupina = factor(k$cluster))
-# skupine1 <- analiza.skupine1
-# dobro.slabo <- skupine1[c("c=m", "c<m","c<<m"), "skupine1"]
-# 
-# m1 <- match(svet$name_long , skupine1$Drzava)
-# svet$skupine <- analiza.skupine1$skupina[m1]
-# afrika <- pretvori.zemljevid(svet, svet$continent == "Africa")
-# zem1 <- ggplot() + geom_polygon(data = afrika, aes(x=long, y=lat, 
-#                                                    group = group, fill = skupine),
-#                                 color = "grey") + xlab("") + ylab("") + 
-#   scale_fill_manual(values = setNames(c("green3","yellow2","red2"), dobro.slabo),
-#                     labels = setNames(c(" C = U","C < U","C << U"), dobro.slabo),
-#                     na.value = "#7f7f7f")
-# 
-# plot(zem1)  
-
-
-
-# razporeditev 25 držav v 5 skupin - zemljevid
+# razporeditev 26 držav v 5 skupin - zemljevid
 
 pod_analiza3 <- vsi_zdruzeni
 rownames(pod_analiza3) <- pod_analiza3$Drzava
@@ -111,10 +61,10 @@ analiza.norm3 <- scale(pod_analiza3)
 
 k <- kmeans(analiza.norm3,5)
 table(k$cluster)
-k <- kmeans(analiza.norm3,5)#,nstart = 10000
+k <- kmeans(analiza.norm3,5, nstart = 10000)
 analiza.skupine3 <- data.frame(Drzava = names(k$cluster), skupina = factor(k$cluster))
 skupine3 <- analiza.skupine3
-dobro.slabo3 <- skupine3[c("c>,m>", "c>>,m<<","c<<,m>>","c~,m~","c>,m<"), "skupine3"]
+dobro.slabo3 <- skupine3[c("Togo", "The former Yugoslav republic of Macedonia","Bangladesh","Burkina Faso","Nigeria"), "skupina"]
 
 m3 <- match(svet$name_long , skupine3$Drzava)
 svet$skupine <- analiza.skupine3$skupina[m3]

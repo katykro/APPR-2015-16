@@ -28,6 +28,9 @@ map1 <- ggplot() + geom_polygon(data = svet1, aes(x=long,y=lat, group=group,
   guides(fill = guide_colorbar(title = "Odstotek podhranjenih otrok - svet"))
 print(map1)
 
+
+# Zemljevid odstotek nerazvitih otrok v Afriki
+
 raz <- select(vsi_zdruzeni, Drzava,`Odstotek nerazvitih otrok`)
 m2 <- match(svet$name_long, raz$Drzava)
 svet$Nerazvitost <- vsi_zdruzeni$`Odstotek nerazvitih otrok`[m2]
@@ -37,33 +40,3 @@ map2 <- ggplot() + geom_polygon(data = afrika, aes(x=long,y=lat, group=group,
   scale_fill_gradient(low = "#56B1F7", high = "#132B43") +
   guides(fill = guide_colorbar(title = "Odstotek nerazvitih otrok - Afrika"))
 print(map2)
-
-#  zem3 <- map2 + geom_text(data = vsi_zdruzeni %>% filter(`Odstotek nerazvitih otrok` > 40),
-#                           aes(x=long, y=lat, label = Drzava),size = 3, vjust = 2)
-#  print(zem3)
-
-
-cep <- select(tidy_analiza,Spol, Drzava, Cepljenost)
-m3 <- match(svet$name_long, cep$Drzava)
-svet$Cepljenost <- tidy_analiza$Cepljenost[m3]
-svet$Spol <- tidy_analiza$Spol[m3]
-afrika <- pretvori.zemljevid(svet, svet$continent == "Africa")
-map3 <- ggplot() + geom_polygon(data = afrika, aes(x=long,y=lat, group=group,
-                                                   fill= Cepljenost), color="grey35")+ xlab("") + ylab("") +
-  scale_fill_gradient(low = "#56B1F7", high = "#132B43") +
-  guides(fill = guide_colorbar(title = "Odstotek cepljenih otrok - Afrika"))
-print(map3)
-
-# ta del ne deluje...
-# map4 <- map3 + geom_point(data = tidy_analiza, aes(x =long , y =lat, color = Spol)) +
-#   scale_color_manual(name="Spol", breaks = c("Z", "M"),
-#                      labels = c("Ženski", "Moški"),
-#                      values = c("red", "blue"))
-# print(map4)
-
-# slovenija <- slovenija + geom_text(data = obcine@data %>% 
-#                                      filter(procent.obsojenih > 1 | procent.obsojenih < 0.1),
-#                                    aes(x = Y_C, y = X_C, label = OB_UIME),
-#                                    size = 3, vjust = 2)
-
-  

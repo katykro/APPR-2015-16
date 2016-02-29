@@ -59,7 +59,6 @@ zdruzenaUC <- inner_join(umrli, cepljenost, "Drzava"="Drzava","Leto"="Leto", cop
 
 ## Funkcija, ki uvozi podatke iz datotek podatki-nerazvitost.xml in podatki-podhranjenost.xml
  
-require(dplyr)
 require(httr)
 require(jsonlite)
 library(rjson)
@@ -72,6 +71,7 @@ data <- fromJSON(content(r, "text"))
 
 nerazvitost<- nerazviti$fact %>% sapply(unlist) %>% t() %>%
 data.frame()
+
 # izbrisani nepotrebni stolpci
 nerazvitost$dims.DATASOURCE <- NULL
 nerazvitost$dims.GHO <- NULL
@@ -92,6 +92,7 @@ write.csv(nerazvitost,"nerazvitost.csv",row.names=FALSE)
 
 # združitev tabel o umrljivosti in nerazvitosti
 zdruzenaUN <- inner_join(umrli, nerazvitost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
+
 
 # podhranjenost
 
@@ -116,6 +117,7 @@ podhranjenost[78,] <- NA
 podhranjenost <- podhranjenost[!is.na(podhranjenost$Leto),]
 
 write.csv(podhranjenost,"podhranjenost.csv",row.names=FALSE)
+
 
 # združitev obeh  tabel iz JSON
 zdruzenaNP <- inner_join(nerazvitost, podhranjenost, "Drzava"="Drzava","Leto"="Leto", copy=TRUE)
